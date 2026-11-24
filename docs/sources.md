@@ -1,0 +1,16 @@
+# Recipe sources
+
+The knowledge base uses a simplified set of required ingredients from the published recipes below. Optional toppings, serving suggestions, and minor seasoning items may be omitted where they are not modeled by the system.
+
+The measured Bangus recipes below follow the cited recipe quantities. Measurements and cooking steps for other knowledge-base recipes are practical example estimates for the stated servings, not independently verified source recipes.
+
+- BBC Good Food, [Easy chicken fajitas](https://www.bbcgoodfood.com/recipes/easy-chicken-fajitas) — chicken fajitas.
+- BBC Good Food, [Easy classic lasagne](https://www.bbcgoodfood.com/recipes/classic-lasagne) — classic beef lasagne.
+- BBC Good Food, [Easy pancakes](https://www.bbcgoodfood.com/recipes/easy-pancakes) — easy pancakes.
+- BBC Good Food, [Fluffy American pancakes](https://www.bbcgoodfood.com/recipes/american-pancakes) — American pancakes.
+- Panlasang Pinoy, [Filipino chicken adobo](https://panlasangpinoy.com/filipino-chicken-adobo-recipe/) — chicken adobo.
+- Panlasang Pinoy, [Pork adobo](https://panlasangpinoy.com/filipino-food-pork-adobo-recipe/) — pork adobo.
+- Allrecipes, [Lentil soup](https://www.allrecipes.com/recipe/13978/lentil-soup/) — lentil soup.
+- Panlasang Pinoy, [Fried bangus](https://panlasangpinoy.com/fried-bangus-recipe/) — fried milkfish.
+- Panlasang Pinoy, [Inihaw na bangus](https://panlasangpinoy.com/inihaw-na-bangus-recipe/) — grilled milkfish. Optional lemon or calamansi is omitted from the required-ingredient list.
+- Panlasang Pinoy, [Sinigang na bangus](https://panlasangpinoy.com/sinigang-na-bangus-recipe/) — milkfish in sour tamarind broth.
