@@ -235,7 +235,7 @@
       font-size: 11px;
       text-transform: capitalize;
     }
-    .ingredient-option[hidden], .ingredient-chip[hidden] { display: none; }
+    .ingredient-option[hidden] { display: none; }
     .ingredient-option:has(input:checked) { border-color: #9eb77b; background: #edf4df; color: #2d5736; font-weight: 700; }
     .ingredient-option input { width: 14px; height: 14px; margin: 0; accent-color: var(--green); }
     .form-hint { margin: 9px 0 0; color: var(--muted); font-size: 10px; }
@@ -282,10 +282,7 @@
     .favorite-button { display: grid; width: 32px; height: 32px; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: #fff; color: #a44c49; font-size: 17px; }
     .favorite-button:hover, .favorite-button.saved { border-color: #f1c8c2; background: #fff0ee; }
 
-    .content-panel { padding: 18px; }
-    .ingredient-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .ingredient-chip { padding: 7px 12px; border: 1px solid #e5e0d4; border-radius: 20px; background: #fff; color: #59665a; font-size: 11px; text-transform: capitalize; }
-    button.ingredient-chip:hover { border-color: #9eb77b; background: #edf4df; color: var(--green); }
+
     .recipe-open-link { display: inline-block; margin-top: 6px; padding: 0; border: 0; background: none; color: var(--green); font-size: 10px; font-weight: 700; text-align: left; }
     .recipe-open-link:hover { text-decoration: underline; }
     .recipe-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
@@ -293,7 +290,7 @@
     .recipe-card .dish-icon { width: 45px; height: 45px; font-size: 23px; }
     .recipe-card h3 { margin-top: 2px; }
     .recipe-category { margin: 3px 0 0; color: var(--muted); font-size: 10px; text-transform: capitalize; }
-    .search-row { display: grid; grid-template-columns: minmax(0, 1fr) 200px; gap: 10px; margin-bottom: 14px; }
+
     .history-list { display: grid; gap: 8px; }
     .history-row { display: grid; grid-template-columns: 42px minmax(0, 1fr) auto auto; align-items: center; gap: 10px; padding: 10px; border: 1px solid #eee9df; border-radius: 11px; background: #fff; }
     .history-row .food-thumb { width: 42px; height: 42px; font-size: 21px; }
@@ -352,7 +349,7 @@
       .stat-card:nth-child(3) .stat-value { font-size: 14px; }
       .dashboard-grid, .recommend-layout, .about-grid { grid-template-columns: 1fr; }
       .recipe-grid { grid-template-columns: 1fr; }
-      .search-row { grid-template-columns: 1fr; }
+
       .history-row { grid-template-columns: 38px minmax(0, 1fr) auto; }
       .history-row .history-date { display: none; }
       .preference-field { grid-template-columns: 1fr; gap: 5px; }
@@ -377,8 +374,6 @@
         <nav class="nav-list" aria-label="Workspace pages">
           <button class="nav-link active" type="button" data-view="dashboard"><span aria-hidden="true">⌂</span>Dashboard</button>
           <button class="nav-link" type="button" data-view="recommend"><span aria-hidden="true">🍴</span>Recommend Food</button>
-          <button class="nav-link" type="button" data-view="ingredients"><span aria-hidden="true">▦</span>Ingredients</button>
-          <button class="nav-link" type="button" data-view="recipes"><span aria-hidden="true">▤</span>Recipes</button>
           <button class="nav-link" type="button" data-view="favorites"><span aria-hidden="true">♥</span>Favorites</button>
           <button class="nav-link" type="button" data-view="history"><span aria-hidden="true">◷</span>History</button>
           <button class="nav-link" type="button" data-view="about"><span aria-hidden="true">ⓘ</span>About</button>
@@ -494,26 +489,6 @@
         </div>
       </section>
 
-      <section class="page-view" id="ingredients-view" aria-labelledby="ingredients-title">
-        <header class="page-header"><div class="page-heading"><span class="page-icon" aria-hidden="true">▦</span><div><h1 id="ingredients-title">Ingredients</h1><p>All ingredients currently used by recipes in the knowledge base.</p></div></div></header>
-        <section class="panel content-panel">
-          <h2 class="sr-only">Ingredients in the system</h2>
-          <label class="sr-only" for="ingredients-page-search">Search ingredients</label>
-          <input class="search-input" id="ingredients-page-search" type="search" placeholder="Search ingredients to add to your meal" style="max-width:420px;margin-bottom:14px">
-          <p class="form-hint">Select an ingredient to add it to your recommendation search.</p>
-          <div class="ingredient-chips loading" id="ingredient-chips">Loading ingredients…</div>
-        </section>
-      </section>
-
-      <section class="page-view" id="recipes-view" aria-labelledby="recipes-title">
-        <header class="page-header"><div class="page-heading"><span class="page-icon" aria-hidden="true">▤</span><div><h1 id="recipes-title">Recipes</h1><p>Browse the dishes and ingredients known to the system.</p></div></div></header>
-        <div class="search-row">
-          <label class="sr-only" for="recipe-search">Search recipes</label><input class="search-input" id="recipe-search" type="search" placeholder="Search recipe or ingredient">
-          <label class="sr-only" for="recipe-category">Filter by category</label><select id="recipe-category"><option value="any">All categories</option></select>
-        </div>
-        <div class="recipe-grid" id="recipe-grid"></div>
-      </section>
-
       <section class="page-view" id="favorites-view" aria-labelledby="favorites-title">
         <header class="page-header"><div class="page-heading"><span class="page-icon" aria-hidden="true">♥</span><div><h1 id="favorites-title">Favorites</h1><p>Your saved recipes, stored in this browser.</p></div></div></header>
         <div class="recipe-grid" id="favorites-grid"></div>
@@ -561,7 +536,6 @@
     const form = document.getElementById("recommend-form");
     const categorySelect = document.getElementById("category");
     const ingredientList = document.getElementById("ingredient-list");
-    const ingredientChips = document.getElementById("ingredient-chips");
     const resultList = document.getElementById("results-list");
     const resultCount = document.getElementById("results-count");
     const submitButton = document.getElementById("submit-button");
@@ -666,7 +640,6 @@
       if (saveStoredArray("food-expert-favorites", favorites)) {
         showToast(isFavorite(name) ? "Recipe added to favorites." : "Recipe removed from favorites.");
       }
-      renderRecipePage();
       renderFavorites();
       renderDashboard();
     }
@@ -695,44 +668,9 @@
       }
     }
 
-    function filterIngredientDirectory() {
-      const query = document.getElementById("ingredients-page-search").value.trim().toLowerCase().replaceAll("_", " ");
-      let visibleCount = 0;
-      ingredientChips.querySelectorAll(".ingredient-chip").forEach((button) => {
-        const matches = button.textContent.toLowerCase().includes(query);
-        button.hidden = !matches;
-        if (matches) visibleCount += 1;
-      });
-      const empty = ingredientChips.querySelector(".ingredient-empty");
-      if (!visibleCount && !empty) {
-        const message = document.createElement("p");
-        message.className = "ingredient-empty";
-        message.textContent = "No ingredients match your search.";
-        ingredientChips.append(message);
-      } else if (visibleCount && empty) {
-        empty.remove();
-      }
-    }
-
-    function addIngredientToRecommendations(ingredient) {
-      const checkbox = [...ingredientList.querySelectorAll('input[name="ingredients"]')]
-        .find((input) => input.value === ingredient);
-      if (!checkbox) return;
-      checkbox.checked = true;
-      document.getElementById("ingredient-search").value = "";
-      filterRecommendationIngredients();
-      updateIngredientSelection();
-      switchView("recommend");
-      checkbox.focus();
-      checkbox.scrollIntoView({ block: "nearest" });
-      showToast(`${titleCase(ingredient)} added. Select more ingredients or get a recommendation.`);
-    }
-
     function renderIngredients(ingredients) {
       ingredientList.replaceChildren();
       ingredientList.classList.remove("loading");
-      ingredientChips.replaceChildren();
-      ingredientChips.classList.remove("loading");
       ingredients.forEach((ingredient) => {
         const label = document.createElement("label");
         label.className = "ingredient-option";
@@ -745,14 +683,6 @@
         text.textContent = titleCase(ingredient);
         label.append(checkbox, text);
         ingredientList.append(label);
-
-        const chip = document.createElement("button");
-        chip.type = "button";
-        chip.className = "ingredient-chip";
-        chip.textContent = titleCase(ingredient);
-        chip.setAttribute("aria-label", `Add ${titleCase(ingredient)} to recommendation ingredients`);
-        chip.addEventListener("click", () => addIngredientToRecommendations(ingredient));
-        ingredientChips.append(chip);
       });
       updateIngredientSelection();
     }
@@ -873,23 +803,6 @@
         card.append(icon, details, actions);
         resultList.append(card);
       });
-    }
-
-    function renderRecipePage() {
-      if (!systemData) return;
-      const search = document.getElementById("recipe-search").value.trim().toLowerCase();
-      const category = document.getElementById("recipe-category").value;
-      const recipes = systemData.foods.filter((food) => {
-        const searchable = `${food.name} ${food.category} ${food.ingredients.join(" ")}`.replaceAll("_", " ");
-        return (category === "any" || food.category === category) && searchable.includes(search);
-      });
-      const grid = document.getElementById("recipe-grid");
-      grid.replaceChildren();
-      if (recipes.length === 0) {
-        grid.append(makeEmptyState("🔎", "No recipes found", "Try changing the search or category."));
-        return;
-      }
-      recipes.forEach((recipe) => grid.append(makeRecipeCard(recipe)));
     }
 
     function renderFavorites() {
@@ -1066,7 +979,6 @@
         link.setAttribute("aria-current", active ? "page" : "false");
       });
       if (name === "dashboard") renderDashboard();
-      if (name === "recipes") renderRecipePage();
       if (name === "favorites") renderFavorites();
       if (name === "history") renderHistory();
     }
@@ -1078,21 +990,17 @@
         systemData = await response.json();
 
         categorySelect.replaceChildren();
-        const recipeCategory = document.getElementById("recipe-category");
-        recipeCategory.replaceChildren();
         [["any", "All categories"], ...systemData.categories.map((category) => [category, titleCase(category)])]
           .forEach(([value, label]) => {
             const option = document.createElement("option");
             option.value = value;
             option.textContent = label;
             categorySelect.append(option);
-            recipeCategory.append(option.cloneNode(true));
           });
         categorySelect.disabled = false;
         renderIngredients(systemData.ingredients);
         document.getElementById("dish-count").textContent = `${systemData.dish_count} recipes available`;
         renderDashboard();
-        renderRecipePage();
         renderFavorites();
         renderHistory();
         submitButton.disabled = false;
@@ -1109,10 +1017,7 @@
     document.querySelectorAll("[data-go]").forEach((button) => {
       button.addEventListener("click", () => switchView(button.dataset.go));
     });
-    document.getElementById("recipe-search").addEventListener("input", renderRecipePage);
     document.getElementById("ingredient-search").addEventListener("input", filterRecommendationIngredients);
-    document.getElementById("ingredients-page-search").addEventListener("input", filterIngredientDirectory);
-    document.getElementById("recipe-category").addEventListener("change", renderRecipePage);
     document.getElementById("recipe-dialog-close").addEventListener("click", () => recipeDialog.close());
     recipeDialog.addEventListener("click", (event) => {
       if (event.target === recipeDialog) recipeDialog.close();
