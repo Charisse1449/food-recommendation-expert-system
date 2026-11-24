@@ -6,10 +6,10 @@ A food recommendation application in which SWI-Prolog checks recipes against the
 
 - Recommend recipes by category and available ingredients.
 - Rank partial matches by the percentage of required ingredients available and show what is missing.
-- Search available ingredients or add them from the searchable ingredient list.
+- Search and select available ingredients with checkboxes on the Recommend Food page.
 - Open recipe details inside the app without leaving the page.
 - See measured ingredient quantities and cooking steps for all recipes inside the app, with no recipe-site links. Non-Bangus quantities are clearly marked as estimates.
-- Browse and filter the recipe knowledge base in a local web interface.
+- Open recipe details from recommendation results or saved favorites.
 - Keep favorites and recommendation history in the browser.
 - Run the rules directly in SWI-Prolog or through the local HTTP/JSON interface.
 
