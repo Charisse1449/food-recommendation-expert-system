@@ -2,7 +2,7 @@
 :- use_module(library(http/http_files)).
 :- use_module(library(http/http_json)).
 :- use_module(library(http/thread_httpd)).
-:- consult('knowledge_base.pl').
+:- consult('src/prolog/knowledge_base.pl').
 
 :- prolog_load_context(directory, PrologDirectory),
    directory_file_path(PrologDirectory, '..', SourceDirectory),
