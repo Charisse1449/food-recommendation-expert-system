@@ -10,7 +10,7 @@ Objectives:
 2. Recommend exact and partial recipe matches, explaining missing ingredients.
 3. Provide a usable web interface while keeping the reasoning available for direct Prolog queries.
 
-The application includes searchable ingredients, category selection, ranked recommendations, in-app recipe details, a recipe browser, favorites, and recommendation history. Users can select an ingredient from the searchable ingredient list to add it to the recommender. Clicking a recipe opens its details without leaving the app. All 37 recipes have measured ingredient lists, serving counts, and cooking steps. Bangus recipe measurements are based on cited recipes; the other recipes are marked as practical estimates. The knowledge base contains seven categories.
+The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app. All 37 recipes have measured ingredient lists, serving counts, and cooking steps. Bangus recipe measurements are based on cited recipes; the other recipes are marked as practical estimates. The knowledge base contains seven categories.
 
 ## 2. Implementation & Prolog logic
 
