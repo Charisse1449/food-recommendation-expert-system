@@ -22,7 +22,14 @@ The measured Bangus recipes below follow the cited recipe quantities. Measuremen
 
 The five Filipino recipes added in this expansion use simplified required ingredients from these sources. The measured quantities and steps follow the cited recipe cards; optional ingredients are identified in the recipe details where applicable.
 
-The 100-recipe catalog expansion is a recommendation dataset: its simplified ingredient lists represent common recipe ingredients and are not full, measured recipe transcriptions. These indexes and archives were used to check dish names and recipe groupings; individual preparation methods and quantities should be consulted from a specific recipe before cooking.
+The 100-recipe catalog expansion is a recommendation dataset: its simplified ingredient lists represent common recipe ingredients. For 96 dishes, measured quantities and cooking steps are still pending; those ingredients are not full recipe transcriptions. The indexes and archives below were used to check dish names and groupings.
+
+The following expanded recipes now have measured ingredients and summarized steps transcribed from individual recipe pages:
+
+- Panlasang Pinoy, [Pancit Bihon Guisado](https://panlasangpinoy.com/pancit-guisado/) — pancit bihon.
+- Panlasang Pinoy, [Pancit Canton](https://panlasangpinoy.com/pancit-canton-recipe/) — pancit canton.
+- Panlasang Pinoy, [Pancit Palabok](https://panlasangpinoy.com/pancit-palabok-recipe/) — pancit palabok.
+- Panlasang Pinoy, [Pancit Lomi](https://panlasangpinoy.com/pancit-lomi-recipe/) — pancit lomi.
 
 - Panlasang Pinoy, [Recipe sitemap](https://panlasangpinoy.com/html-sitemap/) — dish-name references across Filipino main dishes, noodles, soups, snacks, and desserts.
 - Panlasang Pinoy, [Rice cake recipes](https://panlasangpinoy.com/categories/recipes/rice-cake-recipes/) — kakanin and rice-based dessert references.
