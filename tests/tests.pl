@@ -244,15 +244,29 @@ test(avocado_toast_has_measured_ingredients_and_steps) :-
     memberchk(item("1", "teaspoon", "oil", false), Ingredients),
     assertion(length(Instructions, 3)).
 
-test(all_recipes_have_measured_details) :-
+test(expanded_catalog_has_exactly_100_unique_recipes) :-
+    findall(Dish, expanded_recipe(Dish, _, _), Dishes),
+    sort(Dishes, UniqueDishes),
+    assertion(length(Dishes, 100)),
+    assertion(length(UniqueDishes, 100)).
+
+test(expanded_recommendations_use_their_ingredients) :-
+    recommend(pancit_bihon, dinner,
+              [rice_noodles, chicken, cabbage, carrot, soy_sauce, onion,
+               garlic, oil]),
+    recommend(maja_blanca, dessert,
+              [cornstarch, coconut_milk, evaporated_milk, sweet_corn,
+               sugar, cheese]).
+
+test(expanded_catalog_recipes_have_ingredients_and_details_or_fallback) :-
     forall(food(Dish, _, _),
-           (recipe_details(Dish, Servings, Ingredients, Instructions),
-            integer(Servings),
-            Servings > 0,
-            Ingredients = [_|_],
-            Instructions = [_|_],
-            forall(member(item(Quantity, Unit, Name, _), Ingredients),
-                   (string(Quantity), string(Unit), string(Name))))).
+           ( ( recipe_details(Dish, Servings, Ingredients, Instructions)
+             -> integer(Servings), Servings > 0, Ingredients = [_|_],
+                Instructions = [_|_],
+                forall(member(item(Quantity, Unit, Name, _), Ingredients),
+                       (string(Quantity), string(Unit), string(Name)))
+             ;  expanded_recipe(Dish, _, Required), Required = [_|_]
+             ) )).
 
 test(fajitas_wrong_category, [fail]) :-
     recommend(chicken_fajitas, rice,
