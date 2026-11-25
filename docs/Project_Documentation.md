@@ -10,9 +10,7 @@ The Food Recommendation Expert System helps users find recipes that fit the ingr
 2. Recommend exact and partial recipe matches, explaining missing ingredients.
 3. Provide a usable web interface while keeping the reasoning available for direct Prolog queries.
 
-The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app.
-
-The knowledge base contains **142 recipes and 220 distinct ingredients across eight categories**. The expanded catalog includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The original 42 recipes and 25 expanded recipes have measured ingredient lists, servings, and cooking steps. The other 75 expanded recipes currently provide required ingredients for matching and ingredient display.
+The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app. The knowledge base contains 142 recipes and 220 distinct ingredients across eight categories. The original 42 recipes and 25 expanded recipes have measured ingredient lists, servings, and cooking steps. The other 75 expanded recipes currently provide required ingredients for matching and ingredient display.
 
 ## 2. Implementation and Prolog Logic
 
@@ -35,7 +33,7 @@ Recipe facts and matching and ranking decisions are maintained in `src/prolog/kn
 - `recommend/3` applies category matching and strict ingredient matching.
 - `recommendation_match/5` calculates a match percentage and identifies missing ingredients.
 - `ranked_recommendations/3` builds candidate results and sorts them by score, then dish name.
-- `recipe_details/4` stores ingredient lists, servings, and cooking steps for recipes with available details. These include the original recipes and 25 expanded Filipino recipes. Other expanded catalog entries supply ingredient requirements used for matching.
+- `recipe_details/4` stores measured ingredient lists, servings, and cooking steps for the original recipes and 25 source-based expanded dishes. Other expanded catalog entries supply ingredient requirements used for matching.
 
 These predicates demonstrate knowledge representation, unification, backtracking over recipe facts, recursion, list processing, and negation.
 

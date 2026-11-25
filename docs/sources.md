@@ -2,7 +2,7 @@
 
 The knowledge base uses a simplified set of required ingredients from the published recipes below. Optional toppings, serving suggestions, and minor seasoning items may be omitted where they are not modeled by the system.
 
-Measured recipe details follow the individual sources linked below. The 75 expanded dishes without individual recipe citations still provide required ingredients for recommendation matching only.
+Measured recipe details follow the individual sources linked below. All 100 expanded dishes now have measured recipe details, servings, instructions, and an individual recipe reference.
 
 The expanded knowledge base also includes 11 additional recipes using 10 new ingredients. These additions extend the system's ingredient-matching coverage. Their required ingredient lists are currently modeled in the Prolog knowledge base and are not presented as independently verified published recipes.
 
@@ -24,7 +24,7 @@ The expanded knowledge base also includes 11 additional recipes using 10 new ing
 
 The original five Filipino recipes in the project use simplified required ingredients from their sources. Optional ingredients are identified in the recipe details where applicable.
 
-The 100-recipe catalog expansion is a recommendation dataset: its ingredient lists represent common recipe ingredients. For 75 dishes, measured quantities and cooking steps are still pending; those ingredient lists are not full recipe transcriptions. The indexes and archives below were used to check dish names and groupings.
+The 100-recipe catalog expansion is a recommendation dataset: its ingredient lists represent common recipe ingredients. The expanded catalog now includes source-based recipe cards for all 100 added dishes. The indexes and archives below were used to check dish names and groupings.
 
 The following expanded recipes now have measured ingredients and summarized steps transcribed from individual recipe pages:
 
@@ -53,9 +53,91 @@ The following expanded recipes now have measured ingredients and summarized step
 - Panlasang Pinoy, [Lumpiang Shanghai](https://panlasangpinoy.com/how-to-cook-lumpiang-shanghai-lumpia-knr-pc/) — pork and vegetable spring rolls.
 - Panlasang Pinoy, [Kwek-kwek](https://panlasangpinoy.com/pinoy-street-food-orange-egg-tokneneng-qwek-kwek-kwek-recipe/) — quail eggs in annatto batter.
 - Panlasang Pinoy, [Turon](https://panlasangpinoy.com/turon/) — banana and jackfruit spring rolls.
+- Panlasang Pinoy, [Hotsilog](https://panlasangpinoy.com/hotsilog-hotdog-sinangang-at-itlog/) — the cheese version adapts this hotdog, garlic rice, and egg plate with cheddar.
+- Panlasang Pinoy, [Pork Menudo](https://panlasangpinoy.com/pork-menudo-recipe/) — pork and liver stew in tomato sauce.
+- Panlasang Pinoy, [Chicken Menudo](https://panlasangpinoy.com/healthy-chicken-menudo/) — chicken stew with vegetables and tomato sauce.
+- Panlasang Pinoy, [Pork Sisig](https://panlasangpinoy.com/pork-sisig/) — grilled pork with a seasoned dressing.
+- Panlasang Pinoy, [Sizzling Chicken Sisig](https://panlasangpinoy.com/sizzling-chicken-sisig/) — grilled chicken and liver sisig.
+- Panlasang Pinoy, [Lechon Kawali](https://panlasangpinoy.com/filipino-lechon-kawali/) — boiled and deep-fried pork belly.
+- Panlasang Pinoy, [Crispy Pata](https://panlasangpinoy.com/crispy-pata-pulutan-recipe/) — seasoned, boiled, and fried pork leg.
+- Panlasang Pinoy, [Bulalo](https://panlasangpinoy.com/bulalo-stewed-beef-shank/) — beef shank soup with corn and vegetables.
+- Panlasang Pinoy, [Nilagang Baka](https://panlasangpinoy.com/nilagang-baka-recipe/) — boiled beef with saba, potatoes, and greens.
+- Panlasang Pinoy, [Beef Pochero](https://panlasangpinoy.com/beef-pochero/) — beef stew with chorizo, chickpeas, and vegetables.
+- Panlasang Pinoy, [Pork Pochero](https://panlasangpinoy.com/pork-pochero-recipe/) — pork stew with sausage, saba, and vegetables.
+- Panlasang Pinoy, [Pinakbet Ilocano](https://panlasangpinoy.com/pakbet/) — vegetables simmered with anchovy sauce and bagnet.
+- Panlasang Pinoy, [Pinakbet Tagalog](https://panlasangpinoy.com/pinakbet-tagalog-recipe-knr-sc/) — vegetables and lechon kawali with shrimp paste.
+- Panlasang Pinoy, [Laing](https://panlasangpinoy.com/laing-recipe/) — taro leaves and pork simmered in coconut milk.
+- Panlasang Pinoy, [Ginataang Langka with Pork](https://panlasangpinoy.com/ginataang-langka-with-pork-recipe/) — young jackfruit and pork in coconut milk.
+- Panlasang Pinoy, [Ginataang Talong with Malunggay and Tofu](https://panlasangpinoy.com/ginataang-talong-with-malunggay-and-tofu/) — eggplant, tofu, and malunggay in coconut sauce.
+- Panlasang Pinoy, [Adobong Kangkong](https://panlasangpinoy.com/adobong-kangkong/) — water spinach cooked with soy sauce and vinegar.
+- Panlasang Pinoy, [Chopsuey](https://panlasangpinoy.com/chopsuey/) — chicken, shrimp, and vegetables in thickened sauce.
+- Panlasang Pinoy, [Lumpiang Sariwa](https://panlasangpinoy.com/asian-vegetable-dish-fresh-spring-roll-lumpiang-sariwa-recipe/) — fresh vegetable, pork, and shrimp rolls with sauce.
+- Panlasang Pinoy, [Lumpiang Togue](https://panlasangpinoy.com/lumpiang-togue-toge-recipe/) — mung bean sprout and tofu spring rolls.
 
 - Panlasang Pinoy, [Recipe sitemap](https://panlasangpinoy.com/html-sitemap/) — dish-name references across Filipino main dishes, noodles, soups, snacks, and desserts.
 - Panlasang Pinoy, [Rice cake recipes](https://panlasangpinoy.com/categories/recipes/rice-cake-recipes/) — kakanin and rice-based dessert references.
 - Panlasang Pinoy, [Dessert recipes](https://panlasangpinoy.com/categories/recipes/dessert-and-pastry-recipes/) — Filipino dessert references.
 - Kawaling Pinoy, [Recipe index](https://www.kawalingpinoy.com/category/recipe-index/) — Filipino recipe groupings by ingredient and dish type.
 - Kawaling Pinoy, [Main dishes](https://www.kawalingpinoy.com/category/main-dishes/) — Filipino entree and ulam references.
+
+## Newly documented recipe details
+
+- Panlasang Pinoy, [Tokwat Baboy](https://panlasangpinoy.com/filipino-foodpork-fried-tofu-tokwat-baboy-recipe/).
+- Panlasang Pinoy, [Ukoy](https://panlasangpinoy.com/ukoy-shrimp-fritters-recipe/).
+- Panlasang Pinoy, [Bananacue](https://panlasangpinoy.com/bananacue/).
+- Panlasang Pinoy, [Kamote Cue](https://panlasangpinoy.com/filipino-food-sweet-potato-camote-kamote-que-recipe/).
+- Panlasang Pinoy, [Vegetable Okoy](https://panlasangpinoy.com/vegetable-okoy/).
+- Panlasang Pinoy, [Ensaladang Filipino](https://panlasangpinoy.com/ensaladang-filipino-recipe/).
+- Kawaling Pinoy, [Ensaladang Pako](https://www.kawalingpinoy.com/ensaladang-pako/).
+- Panlasang Pinoy, [Atchara](https://panlasangpinoy.com/pickled-papaya-appetize-atsara-achara-atchara-recipe/).
+- Panlasang Pinoy, [Bistek Tagalog](https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/).
+- Panlasang Pinoy, [Beef Salpicao](https://panlasangpinoy.com/easy-beef-salpicao-recipe/comment-page-1/).
+- Panlasang Pinoy, [Beef Morcon](https://panlasangpinoy.com/beef-holiday-christmas-new-year-food-menu-morcon-recipe/).
+- Panlasang Pinoy, [Beef Pares](https://panlasangpinoy.com/beef-pares-sa-kanto/).
+- Panlasang Pinoy, [Dinuguan](https://panlasangpinoy.com/dinuguan-blood-stew/).
+- Panlasang Pinoy, [Dinakdakan](https://panlasangpinoy.com/dinakdakan-recipe/).
+- Panlasang Pinoy, [Bopis](https://panlasangpinoy.com/bopis-pulutan-recipe/).
+- Panlasang Pinoy, [Embutido](https://panlasangpinoy.com/embutido/).
+- Panlasang Pinoy, [Humba](https://panlasangpinoy.com/filipino-food-pork-humba-recipe/).
+- Panlasang Pinoy, [Lechon Paksiw](https://panlasangpinoy.com/lechon-paksiw-recipe/).
+- Panlasang Pinoy, [Crispy Pork Belly Chicharon](https://panlasangpinoy.com/crispy-pork-belly-chicharon/).
+- Panlasang Pinoy, [Chicken Inasal](https://panlasangpinoy.com/grilled-chicken-inasal-recipe/).
+- Panlasang Pinoy, [Chicken Galantina](https://panlasangpinoy.com/chicken-galantina-recipe/).
+- Panlasang Pinoy, [Chicken Binakol](https://panlasangpinoy.com/binakol-na-manok-recipe/).
+- Panlasang Pinoy, [Chicken Pastel](https://panlasangpinoy.com/how-to-cook-chicken-pastel/).
+- Panlasang Pinoy, [Pinoy Chicken Curry](https://panlasangpinoy.com/chicken-curry-pinoy-style/).
+- Panlasang Pinoy, [Chicken Pochero](https://panlasangpinoy.com/chicken-pochero/).
+- Panlasang Pinoy, [Chicken Hamonado](https://panlasangpinoy.com/chicken-hamonado-recipe/).
+- Panlasang Pinoy Meaty Recipes, [Chicken Relleno](https://www.panlasangpinoymeatrecipes.com/chicken-relleno-rellenong-manok.htm).
+- Panlasang Pinoy, [Escabeche](https://panlasangpinoy.com/filipino-style-escabeche/).
+- Panlasang Pinoy, [Sarciadong Isda](https://panlasangpinoy.com/sarciadong-isda-easy-fish-recipe/) ? tomato-sauce fish method used for the tilapia variant.
+- Panlasang Pinoy, [Paksiw na Isda](https://panlasangpinoy.com/paksiw-na-isda-recipe/).
+
+
+## Final recipe details for the expanded catalog
+
+- Panlasang Pinoy, [Daing na Bangus](https://panlasangpinoy.com/daing-na-bangus-fried-milkfish-marinated-in-vinegar/).
+- Panlasang Pinoy, [Paksiw na Bangus](https://panlasangpinoy.com/paksiw-na-bangus-recipe/).
+- Panlasang Pinoy, [Kinilaw na Tuna](https://panlasangpinoy.com/kinilaw-kilawin-na-tuna/).
+- Panlasang Pinoy, [Inihaw na Tilapia](https://panlasangpinoy.com/top-10-favorite-tilapia-recipes/).
+- Panlasang Pinoy, [Halabos na Hipon](https://panlasangpinoy.com/halabos-na-hipon-recipe/).
+- Panlasang Pinoy, [Ginataang Tahong](https://panlasangpinoy.com/ginataang-tahong-recipe/).
+- Panlasang Pinoy, [Sizzling Pusit](https://panlasangpinoy.com/sizzling-pusit/).
+- Panlasang Pinoy, [Adobong Pusit](https://panlasangpinoy.com/adobong-pusit-recipe/).
+- Panlasang Pinoy, [Sinigang na Hipon](https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/).
+- Panlasang Pinoy, [Sinigang na Baboy with Gabi](https://panlasangpinoy.com/sinigang-na-baboy-with-gabi/).
+- Panlasang Pinoy, [Sinigang na Baka](https://panlasangpinoy.com/sinigang-na-baka-recipe/).
+- Panlasang Pinoy, [Cansi](https://panlasangpinoy.com/cansi-recipe-ilonggo-bulalo-and-sinigang-in-one-delicious-soup-dish/).
+- Panlasang Pinoy, [Batchoy](https://panlasangpinoy.com/batchoy/).
+- Panlasang Pinoy, [Chicken Mami](https://panlasangpinoy.com/chicken-mami/).
+- Panlasang Pinoy, [Almondigas](https://panlasangpinoy.com/almondigas-misua-patola-recipe/).
+- Panlasang Pinoy, [Chicken Sopas](https://panlasangpinoy.com/chicken-sopas-soup-recipe/).
+- Panlasang Pinoy, [Filipino Chicken Macaroni Sopas](https://panlasangpinoy.com/filipino-chicken-macaroni-sopas/).
+- Chef's Pencil, [Mais con Yelo](https://www.chefspencil.com/mais-con-yelo/).
+- Kawaling Pinoy, [Halo-halo](https://www.kawalingpinoy.com/halo-halo/).
+- Panlasang Pinoy, [Buko Pandan](https://panlasangpinoy.com/buko-pandan-dessert-recipe/).
+- Kawaling Pinoy, [Mango Sago](https://www.kawalingpinoy.com/mango-sago/).
+- Panlasang Pinoy, [Leche Flan](https://panlasangpinoy.com/leche-flan/).
+- Panlasang Pinoy, [Ube Halaya](https://panlasangpinoy.com/purple-yam-dessert-ube-halaya-recipe/).
+- Panlasang Pinoy, [Maja Blanca](https://panlasangpinoy.com/maja-blanca-recipe/).
+- Panlasang Pinoy, [Bibingka](https://panlasangpinoy.com/rice-cake-bibingka-recipe/).
