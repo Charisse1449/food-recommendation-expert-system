@@ -1121,3 +1121,79 @@ recipe_details(tilapia_in_tomato, 4,
 recipe_details(paksiw_na_isda, 4,
  [item("2", "pieces", "whole fish", false), item("1/2", "cup", "vinegar", false), item("1", "cup", "water", false), item("1", "piece", "ginger", false), item("6", "cloves", "garlic", false), item("1", "piece", "bitter melon", true)],
  ["Arrange fish in a pot with vinegar, water, ginger, garlic, onion, peppercorn, and salt.", "Bring to a boil without stirring, then cover and simmer until fish is cooked. Add chili and optional bitter melon."]).
+
+recipe_details(daing_na_bangus, 2,
+ [item("1", "piece", "milkfish, butterflied", false), item("1/2", "cup", "vinegar", false), item("4", "cloves", "garlic", false), item("1/2", "teaspoon", "peppercorn", false), item("1/2", "teaspoon", "salt", false), item("1/2", "cup", "cooking oil", false)],
+ ["Mix vinegar, crushed garlic, peppercorn, and salt. Pour over butterflied milkfish and refrigerate overnight.", "Drain the fish and pan-fry over medium heat until crisp and cooked through on both sides."]).
+recipe_details(paksiw_na_bangus, 4,
+ [item("1 1/2", "pounds", "milkfish, sliced", false), item("3", "thumbs", "ginger", false), item("5", "cloves", "garlic", false), item("1/2", "cup", "vinegar", false), item("1", "cup", "water", false), item("1", "piece", "eggplant", false)],
+ ["Layer ginger, garlic, onion, eggplant, chili, peppercorn, and milkfish in a pot.", "Pour over vinegar and water. Bring to a boil, cover, and simmer gently about 15 minutes; season with salt."]).
+recipe_details(kinilaw_na_tuna, 6,
+ [item("2", "pounds", "fresh tuna, cubed", false), item("1 1/2", "cups", "vinegar", false), item("1/2", "cup", "calamansi juice", false), item("3", "tablespoons", "ginger, minced", false), item("1", "piece", "red onion", false), item("2", "teaspoons", "salt", false)],
+ ["Use very fresh, properly chilled tuna. Briefly toss with 3/4 cup vinegar, then drain.", "Mix tuna with remaining vinegar, calamansi, ginger, salt, pepper, and chili. Chill, add onion, and serve promptly."]).
+recipe_details(inihaw_na_tilapia, 4,
+ [item("2", "pieces", "whole tilapia, cleaned", false), item("1", "piece", "tomato", false), item("1", "piece", "onion", false), item("1", "thumb", "ginger", false), item("1", "teaspoon", "salt", false), item("1/2", "teaspoon", "black pepper", false)],
+ ["Season cleaned fish inside and out with salt and pepper; stuff cavity with tomato, onion, and ginger.", "Grill over medium heat, turning carefully, until fish is opaque and flakes easily."]).
+recipe_details(halabos_na_hipon, 4,
+ [item("2", "pounds", "fresh shrimp", false), item("3/4", "cup", "lemon-lime soda", false), item("1/2", "teaspoon", "sea salt", false)],
+ ["Heat a wide pan and add shrimp; toss gently and season with salt.", "Pour in lemon-lime soda and cook, tossing, until shrimp are pink and the liquid evaporates."]).
+recipe_details(ginataang_tahong, 3,
+ [item("1", "pound", "mussels, cleaned", false), item("2", "cups", "coconut milk", false), item("5", "cloves", "garlic", false), item("1", "piece", "onion", false), item("3", "tablespoons", "ginger", false), item("2", "tablespoons", "fish sauce", false)],
+ ["Sauté garlic, onion, and ginger in oil. Add fish sauce, pepper, and coconut milk; simmer until reduced by half.", "Add spinach and mussels. Stir and cook 3 to 5 minutes, just until mussels open and are cooked."]).
+recipe_details(sizzling_pusit, 4,
+ [item("2", "large", "squid, cleaned", false), item("1", "piece", "carrot", false), item("1", "piece", "bell pepper", false), item("1", "piece", "onion", false), item("1/2", "cup", "celery", false), item("1/4", "cup", "banana ketchup", false)],
+ ["Make a quick sauce by simmering banana ketchup, cooking wine, water, flour, and seasonings until smooth.", "Sauté ginger, onion, carrot, and celery. Add bell pepper and squid; cook briefly, coat with sauce, and serve hot on a warmed plate."]).
+recipe_details(adobong_pusit, 4,
+ [item("2", "pounds", "squid, cleaned", false), item("1/2", "cup", "soy sauce", false), item("1/2", "cup", "vinegar", false), item("1", "cup", "water", false), item("5", "cloves", "garlic", false), item("1", "piece", "onion", false)],
+ ["Bring soy sauce, vinegar, and water to a boil. Add squid and simmer for 5 minutes; remove squid and reserve liquid.", "Sauté garlic, onion, and tomato. Return squid and reserved liquid; simmer briefly, season, and serve promptly to keep squid tender."]).
+recipe_details(sinigang_na_hipon, 4,
+ [item("1", "pound", "shrimp", false), item("44", "grams", "tamarind soup mix", false), item("1", "bunch", "water spinach", false), item("15", "pieces", "snake beans", false), item("5", "pieces", "okra", false), item("2", "quarts", "water", false)],
+ ["Bring water to a boil with onion and tomato; dissolve tamarind soup mix and season the broth.", "Add radish, beans, and okra until nearly tender. Add shrimp and cook just until pink, then stir in water spinach and serve."]).
+recipe_details(sinigang_na_baboy_gabi, 6,
+ [item("2", "pounds", "pork belly", false), item("2", "pieces", "taro root", false), item("2", "pieces", "tomato", false), item("1", "piece", "onion", false), item("2", "packs", "tamarind soup mix", false), item("8", "cups", "water", false)],
+ ["Bring water, onion, and tomato to a boil. Add pork and simmer until partly tender.", "Add taro and cook until pork is tender. Stir in tamarind mix, then add radish and other vegetables in order of cooking time; finish with leafy greens."]).
+recipe_details(sinigang_na_baka, 6,
+ [item("4", "pounds", "beef shank", false), item("50", "grams", "tamarind soup mix", false), item("5", "pieces", "taro root", false), item("1", "piece", "daikon radish", false), item("4", "pieces", "tomato", false), item("2", "quarts", "water and rice water", false)],
+ ["Sauté garlic, onion, and tomato; add beef and brown lightly. Add water and rice water; cover and simmer until beef is tender.", "Stir in tamarind mix. Cook taro and radish until soft, then add beans and other vegetables; finish with water spinach and season."]).
+recipe_details(kansi, 4,
+ [item("2", "pounds", "beef shank", false), item("2", "stalks", "lemongrass", false), item("8", "cups", "water", false), item("1", "piece", "onion", false), item("1", "can", "green jackfruit", false), item("1", "packet", "tamarind soup base", false)],
+ ["Brown beef in annatto oil with garlic, then add water, onion, tomato, and lemongrass. Cover and simmer until fork tender.", "Add jackfruit and souring mix; simmer until jackfruit softens. Season with fish sauce and serve hot."]).
+recipe_details(batchoy, 4,
+ [item("1", "pound", "pork", false), item("1/2", "pound", "pork liver", false), item("8", "ounces", "egg noodles", false), item("6", "cups", "pork broth", false), item("4", "cloves", "garlic", false), item("1", "piece", "egg", false)],
+ ["Simmer pork in broth until tender, then slice. Cook liver separately and prepare noodles according to package directions.", "Season broth with fish sauce and shrimp paste. Divide noodles and meats among bowls, pour in hot broth, and top with egg, chicharon, and toasted garlic."]).
+recipe_details(mami, 4,
+ [item("8", "ounces", "egg noodles", false), item("1", "pound", "chicken", false), item("6", "cups", "chicken broth", false), item("1", "cup", "cabbage", false), item("1", "piece", "carrot", false), item("2", "tablespoons", "soy sauce", false)],
+ ["Simmer chicken in broth until cooked; remove, shred, and season broth with soy sauce, garlic, and pepper.", "Cook noodles separately. Place noodles and vegetables in bowls, add shredded chicken, and ladle over hot broth."]).
+recipe_details(almondigas, 6,
+ [item("1", "pound", "ground pork", false), item("4", "ounces", "misua noodles", false), item("1", "piece", "patola", false), item("1", "piece", "egg", false), item("5", "cups", "water", false), item("3", "tablespoons", "fish sauce", false)],
+ ["Mix pork with egg, half the onion, flour, salt, and pepper; form small meatballs.", "Sauté garlic and remaining onion. Add broth and fish sauce; boil, drop in meatballs, and cook 10 minutes. Add patola, then misua for the final minutes."]).
+recipe_details(sopas, 6,
+ [item("1", "pound", "chicken breast", false), item("2", "cups", "elbow macaroni", false), item("4", "cups", "chicken broth", false), item("3/4", "cup", "milk", false), item("3/4", "cup", "carrot", false), item("3/4", "cup", "cabbage", false)],
+ ["Melt butter and soften onion; add chicken and cook through. Pour in broth and water and bring to a simmer.", "Add macaroni and cook until tender. Stir in carrot, celery, cabbage, and milk; season and serve hot."]).
+recipe_details(macaroni_soup, 6,
+ [item("1/2", "pound", "macaroni", false), item("2", "pieces", "chicken breast", false), item("10", "cups", "chicken broth", false), item("1", "can", "evaporated milk", false), item("1", "piece", "carrot", false), item("1", "cup", "cabbage", false)],
+ ["Boil chicken until cooked, shred it, and reserve broth. Sauté garlic and onion in oil, then add chicken, carrot, sausage, and seasonings.", "Add broth and simmer. Stir in macaroni and cook until tender; add milk and cabbage, heat through, and serve."]).
+recipe_details(mais_con_yelo, 4,
+ [item("2", "cups", "sweet corn kernels", false), item("4", "cups", "shaved ice", false), item("1", "cup", "evaporated milk", false), item("2", "tablespoons", "sugar", false), item("1", "cup", "leche flan", true)],
+ ["Divide corn kernels into serving glasses and sweeten to taste.", "Pack with shaved ice, pour over evaporated milk, and top with optional leche flan. Serve immediately."]).
+recipe_details(halo_halo, 4,
+ [item("2", "cups", "shaved ice", false), item("1/3", "cup", "evaporated milk", false), item("2", "tablespoons", "sweet beans", false), item("2", "tablespoons", "saba banana", false), item("2", "tablespoons", "jackfruit", false), item("1", "slice", "leche flan", false)],
+ ["Layer sweet beans, banana, jackfruit, and other sweetened fruit or jellies in tall glasses.", "Top with shaved ice and evaporated milk. Finish with leche flan and ube; mix before eating."]).
+recipe_details(buko_pandan, 6,
+ [item("20", "ounces", "young coconut strips", false), item("250", "milliliters", "all-purpose cream", false), item("150", "milliliters", "condensed milk", false), item("1/2", "cup", "cooked sago", true), item("3", "ounces", "gelatin", false), item("2", "cups", "water", false)],
+ ["Boil water with pandan leaves, remove leaves, then dissolve sugar, gelatin, and pandan flavoring. Chill until firm and cut into cubes.", "Combine gelatin cubes with coconut, cream, condensed milk, and optional sago. Chill well before serving."]).
+recipe_details(mango_sago, 6,
+ [item("2", "cups", "ripe mango", false), item("1/2", "cup", "small sago pearls", false), item("1", "cup", "condensed milk", false), item("1", "cup", "evaporated milk", false), item("1", "cup", "all-purpose cream", false)],
+ ["Boil sago until translucent, drain, and rinse with cold water. Dice mango, reserving some for topping.", "Mix milk and cream, fold in mango and sago, then chill thoroughly. Serve cold with reserved mango."]).
+recipe_details(leche_flan, 6,
+ [item("10", "pieces", "egg yolks", false), item("14", "ounces", "condensed milk", false), item("1", "cup", "evaporated milk", false), item("1", "cup", "sugar", false), item("1", "teaspoon", "vanilla", false)],
+ ["Melt sugar in flan molds over low heat to make caramel. Tilt to coat the bases and cool.", "Whisk yolks with condensed milk, evaporated milk, and vanilla; pour into molds, cover with foil, and steam until set. Chill before unmolding."]).
+recipe_details(ube_halaya, 4,
+ [item("1", "pound", "grated purple yam", false), item("2", "cups", "coconut milk", false), item("3/4", "cup", "sugar", false), item("1", "teaspoon", "cooking oil", false)],
+ ["Bring coconut milk to a gentle boil and dissolve sugar.", "Stir in grated purple yam and cook over low to medium heat, stirring often, until very thick. Transfer to an oiled mold and cool."]).
+recipe_details(maja_blanca, 8,
+ [item("4", "cups", "coconut milk", false), item("3/4", "cup", "cornstarch", false), item("14", "ounces", "condensed milk", false), item("15", "ounces", "sweet corn", false), item("3/4", "cup", "evaporated milk", false), item("3/4", "cup", "sugar", false)],
+ ["Bring coconut milk, sugar, condensed milk, and corn to a simmer. Whisk cornstarch into evaporated milk until smooth.", "Pour the slurry into the pot and stir continuously until thick. Spread in a tray, cool, and chill until set."]).
+recipe_details(bibingka, 3,
+ [item("1", "cup", "rice flour", false), item("1/2", "cup", "sugar", false), item("2 1/2", "teaspoons", "baking powder", false), item("3", "tablespoons", "butter", false), item("1", "cup", "coconut milk", false), item("2", "pieces", "egg", false)],
+ ["Whisk rice flour, sugar, baking powder, coconut milk, and eggs into a smooth batter; pour into a lined baking pan.", "Bake until nearly set, add salted egg and cheese, then bake until golden. Brush with butter and serve warm."]).
