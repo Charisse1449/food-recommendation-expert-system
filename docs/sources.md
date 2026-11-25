@@ -2,7 +2,7 @@
 
 The knowledge base uses a simplified set of required ingredients from the published recipes below. Optional toppings, serving suggestions, and minor seasoning items may be omitted where they are not modeled by the system.
 
-Measured recipe details follow the individual sources linked below. The 55 expanded dishes without individual recipe citations still provide required ingredients for recommendation matching only.
+Measured recipe details follow the individual sources linked below. The 25 expanded dishes without individual recipe citations still provide required ingredients for recommendation matching only.
 
 - BBC Good Food, [Easy chicken fajitas](https://www.bbcgoodfood.com/recipes/easy-chicken-fajitas) — chicken fajitas.
 - BBC Good Food, [Easy classic lasagne](https://www.bbcgoodfood.com/recipes/classic-lasagne) — classic beef lasagne.
@@ -22,7 +22,7 @@ Measured recipe details follow the individual sources linked below. The 55 expan
 
 The original five Filipino recipes in the project use simplified required ingredients from their sources. Optional ingredients are identified in the recipe details where applicable.
 
-The 100-recipe catalog expansion is a recommendation dataset: its ingredient lists represent common recipe ingredients. For 55 dishes, measured quantities and cooking steps are still pending; those ingredient lists are not full recipe transcriptions. The indexes and archives below were used to check dish names and groupings.
+The 100-recipe catalog expansion is a recommendation dataset: its ingredient lists represent common recipe ingredients. For 25 dishes, measured quantities and cooking steps are still pending; those ingredient lists are not full recipe transcriptions. The indexes and archives below were used to check dish names and groupings.
 
 The following expanded recipes now have measured ingredients and summarized steps transcribed from individual recipe pages:
 
@@ -77,3 +77,36 @@ The following expanded recipes now have measured ingredients and summarized step
 - Panlasang Pinoy, [Dessert recipes](https://panlasangpinoy.com/categories/recipes/dessert-and-pastry-recipes/) — Filipino dessert references.
 - Kawaling Pinoy, [Recipe index](https://www.kawalingpinoy.com/category/recipe-index/) — Filipino recipe groupings by ingredient and dish type.
 - Kawaling Pinoy, [Main dishes](https://www.kawalingpinoy.com/category/main-dishes/) — Filipino entree and ulam references.
+
+## Newly documented recipe details
+
+- Panlasang Pinoy, [Tokwat Baboy](https://panlasangpinoy.com/filipino-foodpork-fried-tofu-tokwat-baboy-recipe/).
+- Panlasang Pinoy, [Ukoy](https://panlasangpinoy.com/ukoy-shrimp-fritters-recipe/).
+- Panlasang Pinoy, [Bananacue](https://panlasangpinoy.com/bananacue/).
+- Panlasang Pinoy, [Kamote Cue](https://panlasangpinoy.com/filipino-food-sweet-potato-camote-kamote-que-recipe/).
+- Panlasang Pinoy, [Vegetable Okoy](https://panlasangpinoy.com/vegetable-okoy/).
+- Panlasang Pinoy, [Ensaladang Filipino](https://panlasangpinoy.com/ensaladang-filipino-recipe/).
+- Kawaling Pinoy, [Ensaladang Pako](https://www.kawalingpinoy.com/ensaladang-pako/).
+- Panlasang Pinoy, [Atchara](https://panlasangpinoy.com/pickled-papaya-appetize-atsara-achara-atchara-recipe/).
+- Panlasang Pinoy, [Bistek Tagalog](https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/).
+- Panlasang Pinoy, [Beef Salpicao](https://panlasangpinoy.com/easy-beef-salpicao-recipe/comment-page-1/).
+- Panlasang Pinoy, [Beef Morcon](https://panlasangpinoy.com/beef-holiday-christmas-new-year-food-menu-morcon-recipe/).
+- Panlasang Pinoy, [Beef Pares](https://panlasangpinoy.com/beef-pares-sa-kanto/).
+- Panlasang Pinoy, [Dinuguan](https://panlasangpinoy.com/dinuguan-blood-stew/).
+- Panlasang Pinoy, [Dinakdakan](https://panlasangpinoy.com/dinakdakan-recipe/).
+- Panlasang Pinoy, [Bopis](https://panlasangpinoy.com/bopis-pulutan-recipe/).
+- Panlasang Pinoy, [Embutido](https://panlasangpinoy.com/embutido/).
+- Panlasang Pinoy, [Humba](https://panlasangpinoy.com/filipino-food-pork-humba-recipe/).
+- Panlasang Pinoy, [Lechon Paksiw](https://panlasangpinoy.com/lechon-paksiw-recipe/).
+- Panlasang Pinoy, [Crispy Pork Belly Chicharon](https://panlasangpinoy.com/crispy-pork-belly-chicharon/).
+- Panlasang Pinoy, [Chicken Inasal](https://panlasangpinoy.com/grilled-chicken-inasal-recipe/).
+- Panlasang Pinoy, [Chicken Galantina](https://panlasangpinoy.com/chicken-galantina-recipe/).
+- Panlasang Pinoy, [Chicken Binakol](https://panlasangpinoy.com/binakol-na-manok-recipe/).
+- Panlasang Pinoy, [Chicken Pastel](https://panlasangpinoy.com/how-to-cook-chicken-pastel/).
+- Panlasang Pinoy, [Pinoy Chicken Curry](https://panlasangpinoy.com/chicken-curry-pinoy-style/).
+- Panlasang Pinoy, [Chicken Pochero](https://panlasangpinoy.com/chicken-pochero/).
+- Panlasang Pinoy, [Chicken Hamonado](https://panlasangpinoy.com/chicken-hamonado-recipe/).
+- Panlasang Pinoy Meaty Recipes, [Chicken Relleno](https://www.panlasangpinoymeatrecipes.com/chicken-relleno-rellenong-manok.htm).
+- Panlasang Pinoy, [Escabeche](https://panlasangpinoy.com/filipino-style-escabeche/).
+- Panlasang Pinoy, [Sarciadong Isda](https://panlasangpinoy.com/sarciadong-isda-easy-fish-recipe/) ? tomato-sauce fish method used for the tilapia variant.
+- Panlasang Pinoy, [Paksiw na Isda](https://panlasangpinoy.com/paksiw-na-isda-recipe/).
