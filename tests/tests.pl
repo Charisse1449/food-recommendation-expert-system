@@ -178,6 +178,37 @@ test(sinigang_na_bangus_missing_fish, [fail]) :-
               [sinigang_mix, kangkong, sitaw, okra, long_green_pepper,
                tomato, onion, fish_sauce, black_pepper, water]).
 
+test(pork_sinigang) :-
+    recommend(pork_sinigang, soup,
+              [pork, tamarind, kangkong, sitaw, eggplant, okra, tomato,
+               long_green_pepper, onion, water, fish_sauce, black_pepper]).
+
+test(tinolang_manok) :-
+    recommend(tinolang_manok, soup,
+              [chicken, malunggay, hot_pepper_leaves, black_pepper,
+               green_papaya, water, chicken_cube, onion, garlic, ginger,
+               fish_sauce, oil]).
+
+test(tortang_talong) :-
+    recommend(tortang_talong, breakfast,
+              [eggplant, egg, salt, black_pepper, oil]).
+
+test(ginisang_monggo) :-
+    recommend(ginisang_monggo, dinner,
+              [mung_beans, garlic, pork, spinach, tomato, onion, shrimp,
+               fish_sauce, water, beef_cube, chicharon, black_pepper]).
+
+test(bicol_express) :-
+    recommend(bicol_express, dinner,
+              [pork, coconut_milk, coconut_cream, shrimp_paste, garlic,
+               thai_chili, ginger, onion, serrano_pepper]).
+
+test(filipino_recipes_have_measured_details) :-
+    forall(member(Dish, [pork_sinigang, tinolang_manok, tortang_talong,
+                         ginisang_monggo, bicol_express]),
+           (recipe_details(Dish, Servings, Ingredients, Steps),
+            Servings > 0, Ingredients = [_|_], Steps = [_|_])).
+
 test(bangus_wrong_category, [fail]) :-
     recommend(fried_bangus, soup,
               [bangus, vinegar, garlic, black_peppercorns, salt, oil]).

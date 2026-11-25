@@ -14,3 +14,10 @@ The measured Bangus recipes below follow the cited recipe quantities. Measuremen
 - Panlasang Pinoy, [Fried bangus](https://panlasangpinoy.com/fried-bangus-recipe/) — fried milkfish.
 - Panlasang Pinoy, [Inihaw na bangus](https://panlasangpinoy.com/inihaw-na-bangus-recipe/) — grilled milkfish. Optional lemon or calamansi is omitted from the required-ingredient list.
 - Panlasang Pinoy, [Sinigang na bangus](https://panlasangpinoy.com/sinigang-na-bangus-recipe/) — milkfish in sour tamarind broth.
+- Panlasang Pinoy, [Pork sinigang](https://panlasangpinoy.com/pork-sinigang-na-baboy-recipe/) — pork and vegetables in tamarind broth.
+- Panlasang Pinoy, [Classic tinolang manok](https://panlasangpinoy.com/classic-tinolang-manok-recipe/) — chicken soup with ginger, papaya, and leafy greens.
+- Panlasang Pinoy, [Tortang talong](https://panlasangpinoy.com/filipino-vegetable-food-eggplant-omelet-tortang-talong-recipe/) — grilled eggplant omelet.
+- Panlasang Pinoy, [Ginisang monggo](https://panlasangpinoy.com/ginisang-munggo-sauteed-mung-beans/) — sauteed mung beans with spinach.
+- Panlasang Pinoy, [Bicol Express](https://panlasangpinoy.com/bicol-express/) — pork simmered with coconut milk, shrimp paste, and chilies.
+
+The five Filipino recipes added in this expansion use simplified required ingredients from these sources. The measured quantities and steps follow the cited recipe cards; optional ingredients are identified in the recipe details where applicable.
