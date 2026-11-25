@@ -10,7 +10,7 @@ Objectives:
 2. Recommend exact and partial recipe matches, explaining missing ingredients.
 3. Provide a usable web interface while keeping the reasoning available for direct Prolog queries.
 
-The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app. The knowledge base contains 142 recipes and 235 distinct ingredients across eight categories. The original 42 recipes and 75 expanded recipes have measured ingredient lists, servings, and cooking steps. The other 25 expanded recipes currently provide required ingredients for matching and ingredient display.
+The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app. The knowledge base contains 142 recipes and 235 distinct ingredients across eight categories. The original 42 recipes and all 100 expanded recipes have measured ingredient lists, servings, and cooking steps.
 
 ## 2. Implementation & Prolog logic
 
@@ -25,7 +25,7 @@ Important predicates:
 - `recommend/3` applies category matching and strict ingredient matching.
 - `recommendation_match/5` calculates a match percentage and the missing ingredients.
 - `ranked_recommendations/3` builds candidate results and sorts them by score, then dish name.
-- `recipe_details/4` stores measured ingredient lists, servings, and cooking steps for the original recipes and 75 source-based expanded dishes. Other expanded catalog entries supply ingredient requirements used for matching.
+- `recipe_details/4` stores measured ingredient lists, servings, and cooking steps for the original recipes and 100 source-based expanded dishes. Other expanded catalog entries supply ingredient requirements used for matching.
 
 These predicates demonstrate knowledge representation, unification, backtracking over recipe facts, recursion, list processing, and negation.
 
