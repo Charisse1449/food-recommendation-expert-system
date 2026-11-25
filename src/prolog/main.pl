@@ -8,7 +8,7 @@ main :-
     writeln(' FOOD RECOMMENDATION EXPERT SYSTEM'),
     writeln('======================================'),
     writeln('Choose a category:'),
-    writeln('any, rice, breakfast, pasta, snack'),
+    writeln('any, rice, breakfast, pasta, snack, dinner, soup, fish, dessert'),
     write('Category: '),
     read_line_to_string(user_input, CategoryInput),
     normalize_space(string(CategoryText), CategoryInput),

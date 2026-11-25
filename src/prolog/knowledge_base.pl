@@ -2,6 +2,8 @@
 % Food Recommendation Expert System
 % Knowledge Base: Facts and Rules
 
+:- consult('expanded_recipes.pl').
+
 % food(Dish, Category, RequiredIngredients).
 
 food(egg_fried_rice, rice, [rice, egg, oil]).
@@ -55,9 +57,40 @@ food(inihaw_na_bangus, fish,
 food(sinigang_na_bangus, fish,
      [bangus, sinigang_mix, kangkong, sitaw, okra, long_green_pepper,
       tomato, onion, fish_sauce, black_pepper, water]).
+food(pork_sinigang, soup,
+     [pork, tamarind, kangkong, sitaw, eggplant, okra, tomato, long_green_pepper,
+      onion, water, fish_sauce, black_pepper]).
+food(tinolang_manok, soup,
+     [chicken, malunggay, hot_pepper_leaves, black_pepper, green_papaya,
+      water, chicken_cube, onion, garlic, ginger, fish_sauce, oil]).
+food(tortang_talong, breakfast,
+     [eggplant, egg, salt, black_pepper, oil]).
+food(ginisang_monggo, dinner,
+     [mung_beans, garlic, pork, spinach, tomato, onion, shrimp, fish_sauce,
+      water, beef_cube, chicharon, black_pepper]).
+food(bicol_express, dinner,
+     [pork, coconut_milk, coconut_cream, shrimp_paste, garlic, thai_chili,
+      ginger, onion, serrano_pepper]).
+
+% Additional recipes using expanded ingredients.
+food(potato_omelet, breakfast, [potato, egg, onion, oil]).
+food(cabbage_stir_fry, dinner, [cabbage, garlic, soy_sauce, oil]).
+food(eggplant_omelet, breakfast, [eggplant, egg, onion, oil]).
+food(creamy_coconut_chicken, dinner, [chicken, coconut_milk, garlic, ginger]).
+food(mushroom_fried_rice, rice, [rice, mushroom, garlic, oil]).
+food(bell_pepper_chicken, dinner, [chicken, bell_pepper, onion, soy_sauce]).
+food(cucumber_salad, snack, [cucumber, vinegar, onion, salt]).
+food(chili_garlic_noodles, pasta, [pasta, chili, garlic, oil]).
+food(potato_carrot_soup, soup, [potato, carrot, onion, water]).
+food(fish_coconut_stew, fish, [fish, coconut_milk, ginger, onion]).
+food(zucchini_stir_fry, dinner, [zucchini, garlic, soy_sauce, oil]).
 
 % Measured ingredients and concise cooking steps for the Bangus recipes.
 % item(Quantity, Unit, DisplayName, Optional).
+
+% Expanded recipes supply recommendation ingredients from a separate catalog.
+food(Dish, Category, Required) :-
+    expanded_recipe(Dish, Category, Required).
 
 recipe_details(fried_bangus, 2,
      [item("1 large boneless", "", "bangus (milkfish)", false),
@@ -103,6 +136,83 @@ recipe_details(sinigang_na_bangus, 3,
       "Add the long green peppers, sitaw, and okra. Cover and cook for 5 to 7 minutes.",
       "Gently stir in the fish sauce and black pepper.",
       "Add the kangkong, cover, turn off the heat, and let it stand for 5 minutes before serving."]).
+
+recipe_details(pork_sinigang, 4,
+     [item("2", "pounds", "pork belly", false),
+      item("1", "pound", "young tamarind", false),
+      item("1", "bunch", "kangkong (water spinach)", false),
+      item("8", "pieces", "sitaw (string beans)", false),
+      item("2", "pieces", "eggplant", false),
+      item("8", "pieces", "okra", false),
+      item("2", "pieces", "tomatoes", false),
+      item("2", "pieces", "long green pepper", false),
+      item("1", "piece", "onion", false),
+      item("2", "quarts", "water", false),
+      item("to taste", "", "fish sauce and ground black pepper", false)],
+     ["Boil the tamarind in water until soft, then mash and strain to make the broth.",
+      "Add the pork and onion; simmer until the pork is tender.",
+      "Add the tomatoes, pepper, sitaw, eggplant, and okra. Simmer until the vegetables are tender.",
+      "Season with fish sauce and black pepper. Stir in kangkong and cook until wilted."]).
+
+recipe_details(tinolang_manok, 5,
+     [item("2", "pounds", "chicken pieces", false),
+      item("1", "cup", "malunggay leaves", false),
+      item("1", "cup", "hot pepper leaves", false),
+      item("1", "piece", "unripe papaya, wedged", false),
+      item("6", "cups", "water", false),
+      item("1", "piece", "chicken cube", false),
+      item("1", "piece", "onion, sliced", false),
+      item("4", "cloves", "garlic, crushed", false),
+      item("3", "thumbs", "ginger, julienned", false),
+      item("2", "tablespoons", "fish sauce", false),
+      item("3", "tablespoons", "vegetable oil", false)],
+     ["Heat oil and saute garlic, onion, and ginger.",
+      "Add chicken and cook until lightly browned, then add water. Bring to a boil and simmer until chicken is cooked through.",
+      "Add papaya and chicken cube; cook until papaya is tender.",
+      "Add malunggay and pepper leaves with fish sauce. Simmer briefly and serve hot."]).
+
+recipe_details(tortang_talong, 1,
+     [item("1", "piece", "Chinese eggplant", false),
+      item("1", "large", "egg", false),
+      item("1/4", "teaspoon", "salt", false),
+      item("1/8", "teaspoon", "ground black pepper", false),
+      item("1/4", "cup", "cooking oil", false)],
+     ["Char the eggplant over a flame, turning until tender. Cool and peel.",
+      "Flatten the eggplant with a fork. Beat the egg with salt and pepper, then coat the eggplant.",
+      "Fry in hot oil until browned on both sides and the egg is cooked through."]).
+
+recipe_details(ginisang_monggo, 6,
+     [item("1 1/2", "cups", "mung beans", false),
+      item("1", "tablespoon", "garlic, chopped", false),
+      item("1/2", "pound", "pork, thinly sliced", false),
+      item("2", "cups", "spinach", false),
+      item("1", "piece", "tomato, chopped", false),
+      item("1", "piece", "onion, chopped", false),
+      item("8", "pieces", "shrimp (optional in source recipe)", true),
+      item("2", "tablespoons", "fish sauce", false),
+      item("24", "ounces", "water", false),
+      item("1", "piece", "beef cube", false),
+      item("1/2", "cup", "crushed chicharon", false),
+      item("1/4", "teaspoon", "ground black pepper", false)],
+     ["Boil the mung beans in water until soft.",
+      "Saute garlic, onion, and tomato in a separate pan. Add pork and cook through.",
+      "Add beef cube and fish sauce; simmer until pork is tender. Add shrimp if using.",
+      "Stir in cooked mung beans and simmer for 10 minutes.",
+      "Fold in spinach and chicharon, season with black pepper, and serve hot."]).
+
+recipe_details(bicol_express, 6,
+     [item("2", "pounds", "pork belly, sliced", false),
+      item("2", "cups", "coconut milk", false),
+      item("2", "cups", "coconut cream", false),
+      item("1/4", "cup", "shrimp paste", false),
+      item("5", "cloves", "garlic", false),
+      item("5", "pieces", "Thai chili pepper", false),
+      item("2", "thumbs", "ginger", false),
+      item("1", "piece", "onion", false),
+      item("2", "pieces", "Serrano pepper", false)],
+     ["Combine pork, ginger, garlic, onion, chilies, shrimp paste, and coconut milk in a pan.",
+      "Cover and simmer, stirring regularly, until the pork is tender and the liquid reduces.",
+      "Stir in coconut cream and cook until the sauce thickens. Serve with rice."]).
 
 recipe_details(egg_fried_rice, 2,
      [item("1", "cup", "cooked rice", false),

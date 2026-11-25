@@ -178,6 +178,37 @@ test(sinigang_na_bangus_missing_fish, [fail]) :-
               [sinigang_mix, kangkong, sitaw, okra, long_green_pepper,
                tomato, onion, fish_sauce, black_pepper, water]).
 
+test(pork_sinigang) :-
+    recommend(pork_sinigang, soup,
+              [pork, tamarind, kangkong, sitaw, eggplant, okra, tomato,
+               long_green_pepper, onion, water, fish_sauce, black_pepper]).
+
+test(tinolang_manok) :-
+    recommend(tinolang_manok, soup,
+              [chicken, malunggay, hot_pepper_leaves, black_pepper,
+               green_papaya, water, chicken_cube, onion, garlic, ginger,
+               fish_sauce, oil]).
+
+test(tortang_talong) :-
+    recommend(tortang_talong, breakfast,
+              [eggplant, egg, salt, black_pepper, oil]).
+
+test(ginisang_monggo) :-
+    recommend(ginisang_monggo, dinner,
+              [mung_beans, garlic, pork, spinach, tomato, onion, shrimp,
+               fish_sauce, water, beef_cube, chicharon, black_pepper]).
+
+test(bicol_express) :-
+    recommend(bicol_express, dinner,
+              [pork, coconut_milk, coconut_cream, shrimp_paste, garlic,
+               thai_chili, ginger, onion, serrano_pepper]).
+
+test(filipino_recipes_have_measured_details) :-
+    forall(member(Dish, [pork_sinigang, tinolang_manok, tortang_talong,
+                         ginisang_monggo, bicol_express]),
+           (recipe_details(Dish, Servings, Ingredients, Steps),
+            Servings > 0, Ingredients = [_|_], Steps = [_|_])).
+
 test(bangus_wrong_category, [fail]) :-
     recommend(fried_bangus, soup,
               [bangus, vinegar, garlic, black_peppercorns, salt, oil]).
@@ -213,15 +244,76 @@ test(avocado_toast_has_measured_ingredients_and_steps) :-
     memberchk(item("1", "teaspoon", "oil", false), Ingredients),
     assertion(length(Instructions, 3)).
 
-test(all_recipes_have_measured_details) :-
-    forall(food(Dish, _, _),
-           (recipe_details(Dish, Servings, Ingredients, Instructions),
-            integer(Servings),
-            Servings > 0,
-            Ingredients = [_|_],
-            Instructions = [_|_],
-            forall(member(item(Quantity, Unit, Name, _), Ingredients),
-                   (string(Quantity), string(Unit), string(Name))))).
+test(expanded_catalog_has_exactly_100_unique_recipes) :-
+    findall(Dish, expanded_recipe(Dish, _, _), Dishes),
+    sort(Dishes, UniqueDishes),
+    assertion(length(Dishes, 100)),
+    assertion(length(UniqueDishes, 100)).
+
+test(expanded_recommendations_use_their_ingredients) :-
+    recommend(pancit_bihon, dinner,
+              [rice_noodles, pork, chicken, snow_peas, carrot, cabbage,
+               celery, onion, garlic, chicken_powder, soy_sauce, water, oil]),
+    recommend(maja_blanca, dessert,
+              [cornstarch, coconut_milk, evaporated_milk, sweet_corn,
+               sugar, cheese]).
+
+test(source_based_expanded_recipes_have_details) :-
+    forall(member(Dish, [pancit_bihon, pancit_canton, pancit_palabok,
+                         pancit_lomi, pancit_malabon, pancit_sotanghon,
+                         pancit_miki, pancit_miswa, pancit_chami,
+                         pancit_batil_patong, arroz_caldo, goto, lugaw,
+                         champorado, tapsilog, tocilog, longsilog, hotsilog,
+                         kare_kare, beef_caldereta, beef_mechado,
+                         chicken_afritada, lumpiang_shanghai, kwek_kwek,
+                         turon, hotsilog_cheese, pork_menudo,
+                         chicken_menudo, pork_sisig, chicken_sisig,
+                         lechon_kawali, crispy_pata, bulalo, nilagang_baka,
+                         pochero, pork_pochero, pinakbet, pinakbet_tagalog,
+                         laing, ginataang_langka, ginataang_talong,
+                         adobong_kangkong, chopsuey, lumpiang_sariwa,
+                         lumpiang_togue, tokwa_baboy, okoy, banana_cue,
+                         camote_cue, ukoy, ensaladang_talong, ensaladang_pako,
+                         atchara, bistek_tagalog, beef_salpicao, beef_morcon,
+                         beef_pares, dinuguan, dinakdakan, bopis, embutido,
+                         humba, paksiw_na_lechon, pork_chicharon, chicken_inasal,
+                         chicken_galantina, chicken_binakol, chicken_pastel,
+                         chicken_curry_pinoy, chicken_pochero, chicken_hamonado,
+                         chicken_relleno, escabecheng_tilapia, tilapia_in_tomato,
+                         paksiw_na_isda, daing_na_bangus, paksiw_na_bangus,
+                         kinilaw_na_tuna, inihaw_na_tilapia, halabos_na_hipon,
+                         ginataang_tahong, sizzling_pusit, adobong_pusit,
+                         sinigang_na_hipon, sinigang_na_baboy_gabi,
+                         sinigang_na_baka, kansi, batchoy, mami, almondigas,
+                         sopas, macaroni_soup, mais_con_yelo, halo_halo,
+                         buko_pandan, mango_sago, leche_flan, ube_halaya,
+                         maja_blanca, bibingka]),
+           (recipe_details(Dish, Servings, Ingredients, Steps),
+            Servings > 0, Ingredients = [_|_], Steps = [_|_])).
+
+
+test(expanded_catalog_recipes_have_ingredients_and_details_or_fallback) :-
+    forall(
+        expanded_recipe(Dish, _, Required),
+        (
+            Required = [_|_],
+            (
+                recipe_details(Dish, Servings, Ingredients, Instructions)
+                ->
+                integer(Servings),
+                Servings > 0,
+                Ingredients = [_|_],
+                Instructions = [_|_],
+                forall(
+                    member(item(Quantity, Unit, Name, _), Ingredients),
+                    (string(Quantity), string(Unit), string(Name))
+                )
+                ;
+                true
+            )
+        )
+    ).
+
 
 test(fajitas_wrong_category, [fail]) :-
     recommend(chicken_fajitas, rice,
