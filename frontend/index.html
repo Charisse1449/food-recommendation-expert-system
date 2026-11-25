@@ -178,6 +178,38 @@
     .empty-state .empty-icon { margin-bottom: 6px; font-size: 31px; }
     .empty-state strong { color: var(--ink); font-size: 13px; }
     .empty-state p { max-width: 290px; margin: 4px auto 0; font-size: 11px; }
+
+.empty-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.empty-action {
+  padding: 10px 15px;
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.empty-action:hover {
+  transform: translateY(-1px);
+}
+
+.empty-action.primary {
+  background: var(--green);
+  color: white;
+}
+
+.empty-action.secondary {
+  background: white;
+  color: var(--green);
+}
     .text-button { padding: 0; border: 0; background: none; color: var(--green); font-size: 11px; font-weight: 700; }
     .text-button:hover { text-decoration: underline; }
 
@@ -763,47 +795,132 @@
       if (!recipeDialog.open) recipeDialog.showModal();
     }
 
-    function renderResults(results) {
-      resultList.replaceChildren();
-      if (results.length === 0) {
-        resultList.append(makeEmptyState("🧺", "Choose ingredients to get started", "Select ingredients you have and the closest recipe matches will appear here."));
-        return;
-      }
-      results.forEach((recipe) => {
-        const card = document.createElement("article");
-        card.className = "result-card";
-        const icon = document.createElement("div");
-        icon.className = "dish-icon";
-        icon.setAttribute("aria-hidden", "true");
-        icon.textContent = dishEmoji(recipe.category, recipe.name);
-        const details = document.createElement("div");
-        const title = makeRecipeTitleButton(recipe.name);
-        const category = document.createElement("span");
-        category.className = "category-tag";
-        category.textContent = `${titleCase(recipe.category)} Dishes`;
-        const ingredients = document.createElement("p");
-        ingredients.className = "ingredient-line";
-        ingredients.textContent = recipe.missing.length
-          ? `You have ${recipe.matched_count} of ${recipe.total_count}. Still need: ${recipe.missing.map(titleCase).join(", ")}`
-          : `You have all ${recipe.total_count} required ingredients.`;
-        const viewIngredients = document.createElement("button");
-        viewIngredients.type = "button";
-        viewIngredients.className = "recipe-open-link";
-        viewIngredients.textContent = "View ingredients";
-        viewIngredients.addEventListener("click", () => openRecipe(recipe.name));
-        details.append(title, category, ingredients, viewIngredients);
-        const actions = document.createElement("div");
-        actions.style.display = "flex";
-        actions.style.alignItems = "center";
-        actions.style.gap = "7px";
-        const match = document.createElement("span");
-        match.className = "match-tag";
-        match.textContent = `${recipe.score}% Match`;
-        actions.append(match, makeFavoriteButton(recipe.name));
-        card.append(icon, details, actions);
-        resultList.append(card);
-      });
+    
+function renderResults(results) {
+  resultList.replaceChildren();
+
+  if (results.length === 0) {
+    const selectedIngredients = [
+      ...form.querySelectorAll('input[name="ingredients"]:checked')
+    ];
+
+    if (selectedIngredients.length === 0) {
+      resultList.append(
+        makeEmptyState(
+          "🧺",
+          "Choose ingredients to get started",
+          "Select the ingredients you have to discover recipes that match."
+        )
+      );
+      return;
     }
+
+    const categoryLabel =
+      categorySelect.selectedOptions[0]?.textContent.trim() || "";
+
+    const categoryPhrase =
+      categoryLabel && !/all categories/i.test(categoryLabel)
+        ? ` in ${categoryLabel}`
+        : "";
+
+    const emptyState = makeEmptyState(
+      "🔎",
+      "No Matching Recipes Found",
+      `We couldn't find recipes matching your selected ingredients${categoryPhrase}. Try adding more ingredients or choosing a different category.`
+    );
+
+    const actions = document.createElement("div");
+    actions.className = "empty-actions";
+
+    const changeButton = document.createElement("button");
+    changeButton.type = "button";
+    changeButton.className = "empty-action secondary";
+    changeButton.textContent = "Change Ingredients";
+
+    changeButton.addEventListener("click", () => {
+      document.getElementById("ingredient-search").focus();
+    });
+
+    const resetButton = document.createElement("button");
+    resetButton.type = "button";
+    resetButton.className = "empty-action primary";
+    resetButton.textContent = "Reset Selections";
+
+    resetButton.addEventListener("click", () => {
+      selectedIngredients.forEach((input) => {
+        input.checked = false;
+      });
+
+      updateIngredientSelection();
+
+      const searchInput = document.getElementById("ingredient-search");
+      searchInput.value = "";
+
+      filterRecommendationIngredients();
+      categorySelect.focus();
+
+      resultList.replaceChildren(
+        makeEmptyState(
+          "🧺",
+          "Choose ingredients to get started",
+          "Your selections have been cleared. Choose ingredients to find matching recipes."
+        )
+      );
+
+      resultCount.textContent = "0 recipes found";
+    });
+
+    actions.append(changeButton, resetButton);
+    emptyState.append(actions);
+    resultList.append(emptyState);
+    return;
+  }
+
+  results.forEach((recipe) => {
+    const card = document.createElement("article");
+    card.className = "result-card";
+
+    const icon = document.createElement("div");
+    icon.className = "dish-icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = dishEmoji(recipe.category, recipe.name);
+
+    const details = document.createElement("div");
+    const title = makeRecipeTitleButton(recipe.name);
+
+    const category = document.createElement("span");
+    category.className = "category-tag";
+    category.textContent = `${titleCase(recipe.category)} Dishes`;
+
+    const ingredients = document.createElement("p");
+    ingredients.className = "ingredient-line";
+
+    ingredients.textContent = recipe.missing.length
+      ? `You have ${recipe.matched_count} of ${recipe.total_count}. Still need: ${recipe.missing.map(titleCase).join(", ")}`
+      : `You have all ${recipe.total_count} required ingredients.`;
+
+    const viewIngredients = document.createElement("button");
+    viewIngredients.type = "button";
+    viewIngredients.className = "recipe-open-link";
+    viewIngredients.textContent = "View ingredients";
+    viewIngredients.addEventListener("click", () => openRecipe(recipe.name));
+
+    details.append(title, category, ingredients, viewIngredients);
+
+    const actions = document.createElement("div");
+    actions.style.display = "flex";
+    actions.style.alignItems = "center";
+    actions.style.gap = "7px";
+
+    const match = document.createElement("span");
+    match.className = "match-tag";
+    match.textContent = `${recipe.score}% Match`;
+
+    actions.append(match, makeFavoriteButton(recipe.name));
+    card.append(icon, details, actions);
+    resultList.append(card);
+  });
+}
 
     function renderFavorites() {
       const grid = document.getElementById("favorites-grid");
