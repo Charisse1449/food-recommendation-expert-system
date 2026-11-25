@@ -178,6 +178,38 @@
     .empty-state .empty-icon { margin-bottom: 6px; font-size: 31px; }
     .empty-state strong { color: var(--ink); font-size: 13px; }
     .empty-state p { max-width: 290px; margin: 4px auto 0; font-size: 11px; }
+
+.empty-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.empty-action {
+  padding: 10px 15px;
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.empty-action:hover {
+  transform: translateY(-1px);
+}
+
+.empty-action.primary {
+  background: var(--green);
+  color: white;
+}
+
+.empty-action.secondary {
+  background: white;
+  color: var(--green);
+}
     .text-button { padding: 0; border: 0; background: none; color: var(--green); font-size: 11px; font-weight: 700; }
     .text-button:hover { text-decoration: underline; }
 
