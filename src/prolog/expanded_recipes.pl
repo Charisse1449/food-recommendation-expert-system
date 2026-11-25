@@ -252,6 +252,72 @@ recipe_details(pancit_batil_patong, 4,
       "Add 4 to 5 cups stock and bring to a boil. Cook miki noodles in the pan with soy sauce and pepper for 2 to 3 minutes.",
       "Poach one egg in the broth, plate the noodles and toppings, then stir the second egg into the remaining boiling stock to make the batil.",
       "Top noodles with poached egg and lechon carajay; serve with batil on the side."]).
+
+recipe_details(arroz_caldo, 6,
+     [item("2", "pounds", "chicken pieces", false),
+      item("1 1/2", "cups", "uncooked rice", false),
+      item("1", "piece", "chicken cube", false),
+      item("34", "ounces", "water", false),
+      item("8", "cloves", "garlic, chopped", false),
+      item("3", "pieces", "onions, chopped", false),
+      item("5", "pieces", "hard-boiled eggs", false),
+      item("1", "cup", "green onions, chopped", false),
+      item("3", "thumbs", "ginger, julienned", false),
+      item("1", "tablespoon", "safflower", false),
+      item("to taste", "", "fish sauce and black pepper", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("1", "piece", "lemon or 4 calamansi", true)],
+     ["Heat oil in a pot and saute garlic, onion, and ginger.",
+      "Add chicken and saute until the outside turns golden. Stir in uncooked rice and cook for 1 minute.",
+      "Pour in water and bring to a boil. Add chicken cube and simmer 30 to 40 minutes, stirring occasionally, until rice is fully cooked.",
+      "Stir in safflower and season with fish sauce and black pepper. Add hard-boiled eggs.",
+      "Serve in bowls topped with green onion and a squeeze of lemon or calamansi."]).
+
+recipe_details(goto, 4,
+     [item("1", "cup", "uncooked rice", false),
+      item("1", "pound", "ox tripe, cleaned", false),
+      item("1", "pound", "pig intestine, cleaned", false),
+      item("4", "pieces", "boiled eggs", false),
+      item("5", "cups", "water for cooking rice", false),
+      item("6", "cups", "water for boiling innards", false),
+      item("2", "teaspoons", "beef powder or 1 beef cube", false),
+      item("1", "teaspoon", "turmeric powder", true),
+      item("2", "tablespoons", "ginger, minced", false),
+      item("1", "medium", "onion, minced", false),
+      item("5", "cloves", "garlic, minced", false),
+      item("2", "teaspoons", "garlic powder", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("1", "head", "toasted garlic", false),
+      item("1/4", "cup", "green onion, chopped", false),
+      item("1/2", "cup", "chicharon, crushed", false),
+      item("to taste", "", "salt and black pepper", false)],
+     ["Boil the tripe and intestine in water for 2 to 3 hours until tender. Cool, slice into bite-sized pieces, and set aside.",
+      "Heat oil in a pot and saute onion, ginger, and garlic. Add the cooked innards and cook for 2 to 3 minutes.",
+      "Stir in beef powder, optional turmeric, and garlic powder. Add cooking water and bring to a boil.",
+      "Add rice and cook over low to medium heat for 30 to 45 minutes, stirring every few minutes until porridge thickens.",
+      "Season with salt and pepper. Serve with boiled egg, green onion, toasted garlic, and crushed chicharon."]).
+
+recipe_details(lugaw, 4,
+     [item("1", "cup", "long-grain white rice", false),
+      item("4-5", "cups", "water", false),
+      item("2", "teaspoons", "salt", false),
+      item("1/4", "cup", "pork floss", false)],
+     ["Bring water to a boil in a pot.",
+      "Add rice and cook for about 30 minutes, stirring occasionally, until thick and porridge-like.",
+      "Stir in salt and cook for 2 more minutes.",
+      "Serve hot topped with pork floss."]).
+
+recipe_details(champorado, 3,
+     [item("8", "tablespoons", "cocoa powder", false),
+      item("1", "cup", "glutinous rice", false),
+      item("1/2", "cup", "sugar", false),
+      item("3 1/2", "cups", "water", false),
+      item("to taste", "", "condensed milk", true)],
+     ["Bring 2 1/2 cups of water to a boil in a pot.",
+      "Add glutinous rice and let the water return to a boil.",
+      "Mix cocoa powder with 1 cup warm water, pour it into the pot, and stir continuously.",
+      "Cook and stir until rice is tender, about 12 to 18 minutes. Add sugar and cook 5 more minutes until thick.",
+      "Serve warm with optional condensed milk."]).
 expanded_recipe(pancit_malabon, dinner,
      [thick_rice_noodles, oil, garlic, onion, pork_belly, fish_sauce,
       black_pepper, shrimp_juice, annatto_water, chicharon, shrimp,
@@ -275,19 +341,201 @@ expanded_recipe(pancit_batil_patong, dinner,
      [beef, miki_noodles, pork_liver, red_onion, mung_bean_sprouts,
       green_onion, cabbage, carrot, soy_sauce, egg, black_pepper,
       lechon_carajay, oil, beef_bones, beef_bouillon, water, celery, onion]).
-expanded_recipe(arroz_caldo, breakfast, [rice, chicken, ginger, garlic, onion, fish_sauce, chicken_broth, safflower]).
-expanded_recipe(goto, breakfast, [rice, beef_tripe, ginger, garlic, onion, beef_broth, fish_sauce]).
-expanded_recipe(lugaw, breakfast, [rice, ginger, garlic, chicken_broth, fish_sauce, onion]).
-expanded_recipe(champorado, breakfast, [glutinous_rice, cocoa_powder, sugar, milk, water]).
-expanded_recipe(tapsilog, breakfast, [beef, garlic, soy_sauce, vinegar, rice, egg, oil]).
-expanded_recipe(tocilog, breakfast, [pork, brown_sugar, garlic, soy_sauce, vinegar, rice, egg, oil]).
-expanded_recipe(longsilog, breakfast, [pork, garlic, vinegar, brown_sugar, rice, egg, oil]).
-expanded_recipe(hotsilog, breakfast, [hotdog, rice, egg, garlic, oil]).
+expanded_recipe(arroz_caldo, breakfast,
+     [chicken, rice, chicken_cube, water, garlic, onion, ginger, safflower,
+      fish_sauce, black_pepper, egg, green_onion, oil]).
+expanded_recipe(goto, breakfast,
+     [rice, beef_tripe, pork_intestine, egg, water, beef_cube, ginger, onion,
+      garlic, garlic_powder, green_onion, toasted_garlic, chicharon, oil,
+      salt, black_pepper]).
+expanded_recipe(lugaw, breakfast, [rice, water, salt, pork_floss]).
+expanded_recipe(champorado, breakfast,
+     [glutinous_rice, cocoa_powder, sugar, water]).
+recipe_details(kare_kare, 6,
+     [item("3", "pounds", "oxtail", false),
+      item("1", "small", "banana flower bud, sliced", false),
+      item("1", "bundle", "pechay", false),
+      item("1", "bundle", "string beans, cut", false),
+      item("4", "pieces", "Chinese eggplant, sliced", false),
+      item("1", "cup", "ground peanuts", false),
+      item("1/2", "cup", "peanut butter", false),
+      item("1/2", "cup", "shrimp paste, for serving", true),
+      item("34", "ounces", "water", false),
+      item("1/2", "cup", "annatto seeds soaked in water", false),
+      item("1/2", "cup", "toasted ground rice", false),
+      item("1", "tablespoon", "garlic, minced", false),
+      item("1", "piece", "onion, chopped", false),
+      item("to taste", "", "salt and pepper", false)],
+     ["Bring water to a boil, add oxtail and onion, then simmer until tender, about 2 1/2 to 3 hours (or pressure-cook about 35 minutes).",
+      "Stir in ground peanuts, peanut butter, and strained annatto water; simmer 5 to 7 minutes.",
+      "Add toasted ground rice and simmer about 5 minutes to thicken the sauce.",
+      "Saute garlic, banana flower, eggplant, and string beans separately for about 5 minutes. Add to the pot with pechay and cook until just tender.",
+      "Season with salt and pepper. Serve hot with shrimp paste on the side."]).
+recipe_details(beef_caldereta, 6,
+     [item("2", "pounds", "beef chuck, cubed", false),
+      item("2", "medium", "carrots, sliced", false),
+      item("1", "large", "potato, cubed", false),
+      item("1", "small", "green bell pepper, sliced", false),
+      item("1", "small", "red bell pepper, sliced", false),
+      item("1", "cube", "beef bouillon", false),
+      item("1", "can (8 ounces)", "tomato sauce", false),
+      item("5", "tablespoons", "liver spread", false),
+      item("3", "cloves", "garlic, crushed", false),
+      item("1", "medium", "yellow onion, chopped", false),
+      item("1/4", "teaspoon", "red pepper flakes", false),
+      item("1 1/2", "cups", "water", false),
+      item("6", "tablespoons", "cooking oil", false),
+      item("to taste", "", "salt and ground black pepper", false)],
+     ["Pan-fry bell peppers for about 3 minutes and set aside. Fry potato and carrots for 3 to 5 minutes and set aside.",
+      "Heat oil in a pot. Saute garlic and onion, then add beef and brown lightly.",
+      "Add tomato sauce, water, and beef cube. Cover and simmer on low for about 60 minutes, until the beef is tender; add water if needed.",
+      "Stir in liver spread, salt, and pepper. Add potato, carrots, and bell peppers; cover and cook 5 minutes.",
+      "Add red pepper flakes and cook 3 minutes more. Serve hot."]).
+recipe_details(beef_mechado, 6,
+     [item("2", "pounds", "beef chuck, cubed", false),
+      item("3", "cloves", "garlic, crushed", false),
+      item("1", "large", "onion, sliced", false),
+      item("8", "ounces", "tomato sauce", false),
+      item("1", "cup", "water", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("1", "slice", "lemon with rind", false),
+      item("1", "large", "potato, sliced", false),
+      item("1/4", "cup", "soy sauce", false),
+      item("1/2", "teaspoon", "ground black pepper", false),
+      item("2", "pieces", "bay leaves", false),
+      item("to taste", "", "salt", false)],
+     ["Heat oil and saute garlic and onion. Add beef and saute until lightly browned.",
+      "Add tomato sauce and water. Cover and simmer until the beef is tender, 60 to 120 minutes, adding water as needed.",
+      "Add soy sauce, pepper, lemon slice, bay leaves, and salt. Simmer until the sauce reduces.",
+      "Add potato and cook until soft. Serve hot with rice."]).
+recipe_details(chicken_afritada, 4,
+     [item("1 1/2", "pounds", "chicken, cut into serving pieces", false),
+      item("2", "pieces", "potatoes, cubed", false),
+      item("1", "piece", "carrot, sliced", false),
+      item("8", "ounces", "tomato sauce", false),
+      item("3", "pieces", "hotdogs, sliced", true),
+      item("1/2", "cup", "green peas", false),
+      item("3", "pieces", "bay leaves", false),
+      item("1", "piece", "red onion, chopped", false),
+      item("2", "teaspoons", "garlic, minced", false),
+      item("3", "cups", "chicken broth", false),
+      item("1/2", "teaspoon", "sugar", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("to taste", "", "salt and ground black pepper", false)],
+     ["Heat oil in a pot and saute onion and garlic until softened.",
+      "Add chicken and brown briefly on both sides. Add tomato sauce and broth; bring to a boil.",
+      "Add bay leaves, cover, and simmer over medium heat for 30 minutes.",
+      "Add hotdogs and carrot; cook 3 minutes. Add potato and cook covered for 8 minutes.",
+      "Stir in green peas and cook 2 minutes. Season with salt and pepper, then serve."]).
+recipe_details(lumpiang_shanghai, 6,
+     [item("2 1/2", "pounds", "ground pork", false),
+      item("1", "piece", "pork bouillon cube", false),
+      item("50", "pieces", "lumpia wrappers", false),
+      item("3/4", "cup", "carrot, minced", false),
+      item("2", "pieces", "onions, minced", false),
+      item("2", "pieces", "eggs", false),
+      item("1/4", "cup", "parsley, minced", false),
+      item("1/2", "teaspoon", "ground black pepper", false),
+      item("1", "teaspoon", "salt", false),
+      item("1", "teaspoon", "sesame oil", false),
+      item("1", "teaspoon", "garlic powder", false),
+      item("2", "cups", "cooking oil", false)],
+     ["Mix ground pork, carrot, onion, and parsley. Add eggs, pepper, salt, garlic powder, sesame oil, and crumbled pork cube; combine well.",
+      "Place 1 to 1 1/2 tablespoons filling on each wrapper and roll closed.",
+      "Deep-fry over low to medium heat until golden brown and cooked through. Drain on paper towels and serve."]).
+recipe_details(kwek_kwek, 4,
+     [item("12 to 18", "pieces", "boiled quail eggs", false),
+      item("1", "cup", "flour", false),
+      item("3", "tablespoons", "cornstarch", false),
+      item("3/4 to 1", "cup", "water", false),
+      item("1", "tablespoon", "annatto powder", false),
+      item("1/2", "teaspoon", "salt", false),
+      item("1/2", "teaspoon", "ground black pepper", false),
+      item("2", "cups", "cooking oil", false)],
+     ["Dredge boiled quail eggs in cornstarch.",
+      "Mix flour, salt, and pepper. Dissolve annatto powder in warm water and stir into the flour to make a smooth batter.",
+      "Coat the eggs in batter and deep-fry in hot oil until crisp. Drain and serve while hot."]).
+recipe_details(turon, 6,
+     [item("6", "pieces", "saba bananas, halved lengthwise", false),
+      item("1", "cup", "ripe jackfruit, sliced", false),
+      item("1 1/2", "cups", "sugar", false),
+      item("12", "pieces", "lumpia wrappers", false),
+      item("2", "cups", "cooking oil", false)],
+     ["Coat banana pieces in sugar. Place each on a wrapper with a piece of jackfruit.",
+      "Fold and seal the wrappers with a little water.",
+      "Heat oil in a pan and add some sugar. When the sugar browns and floats, fry the wrapped bananas until golden and caramel-coated.",
+      "Serve hot."]).
+recipe_details(tapsilog, 3,
+     [item("1", "pound", "beef sirloin, thinly sliced", false),
+      item("3", "pieces", "eggs", false),
+      item("6", "tablespoons", "cooking oil", false),
+      item("3", "tablespoons", "liquid seasoning", false),
+      item("6", "cloves", "garlic, crushed", false),
+      item("3/4", "cup", "pineapple juice", false),
+      item("2", "tablespoons", "brown sugar", false),
+      item("1/4", "teaspoon", "white pepper", false),
+      item("5", "cups", "leftover rice", false),
+      item("1", "teaspoon", "salt", false),
+      item("3/4", "cup", "water", false)],
+     ["Marinate the beef overnight with liquid seasoning, crushed garlic, pineapple juice, brown sugar, and white pepper.",
+      "Fry garlic in 3 tablespoons oil until light golden. Add rice, stir-fry, season with salt, and set aside.",
+      "Simmer beef with its marinade and water until reduced. Add remaining oil and fry until browned and cooked through.",
+      "Fry the eggs and serve with the beef tapa and garlic rice."]).
+recipe_details(tocilog, 3,
+     [item("1", "pound", "uncooked pork tocino", false),
+      item("3", "cups", "garlic fried rice", false),
+      item("3", "pieces", "eggs", false),
+      item("2", "cups", "water", false),
+      item("1/4", "cup", "cooking oil", false)],
+     ["Bring water to a boil. Add oil and tocino; simmer over medium heat until the water evaporates.",
+      "Fry the tocino in the remaining oil for about 3 minutes per side, until cooked through.",
+      "Fry the eggs. Briefly toss the garlic rice in the pan with a little tocino cooking residue.",
+      "Plate the tocino, eggs, and garlic rice; serve with spiced vinegar."]).
+recipe_details(longsilog, 4,
+     [item("1/2", "pound", "skinless longanisa", false),
+      item("2", "pieces", "eggs", false),
+      item("4", "cups", "leftover rice", false),
+      item("5", "cloves", "garlic, crushed", false),
+      item("1/2", "cup", "water", false),
+      item("4", "tablespoons", "cooking oil", false),
+      item("to taste", "", "salt and ground black pepper", false)],
+     ["Heat 2 tablespoons oil and fry the eggs; set aside.",
+      "Add the remaining oil and brown the longanisa. Add water and simmer until it evaporates, then cook the sausage through in the remaining oil.",
+      "Cook the garlic in the pan until lightly browned. Add rice and stir-fry for 3 minutes; season with salt and pepper.",
+      "Serve the longanisa with garlic rice and fried eggs."]).
+recipe_details(hotsilog, 1,
+     [item("3", "pieces", "red hotdogs", false),
+      item("2", "pieces", "eggs", false),
+      item("1", "cup", "garlic fried rice", false),
+      item("1", "medium", "tomato, sliced", false),
+      item("3/4", "cup", "water", false),
+      item("6", "tablespoons", "cooking oil", false)],
+     ["Boil water in a small pot. Add hotdogs and 2 tablespoons oil; cook until the water evaporates.",
+      "Roll and fry the hotdogs in the remaining oil for 1 to 2 minutes, until heated and browned.",
+      "Fry the eggs in the remaining oil.",
+      "Serve the hotdogs and eggs with garlic rice and sliced tomato."]).
+expanded_recipe(tapsilog, breakfast,
+     [beef, liquid_seasoning, garlic, pineapple_juice, brown_sugar,
+      white_pepper, rice, salt, egg, oil, water]).
+expanded_recipe(tocilog, breakfast, [tocino, rice, egg, oil, water]).
+expanded_recipe(longsilog, breakfast,
+     [longanisa, rice, garlic, egg, oil, water, salt, black_pepper]).
+expanded_recipe(hotsilog, breakfast,
+     [hotdog, rice, egg, tomato, oil, water]).
 expanded_recipe(hotsilog_cheese, breakfast, [hotdog, cheese, rice, egg, garlic, oil]).
-expanded_recipe(kare_kare, dinner, [oxtail, peanut_butter, ground_rice, eggplant, sitaw, bok_choy, banana_blossom, shrimp_paste]).
-expanded_recipe(beef_caldereta, dinner, [beef, tomato_sauce, potato, carrot, bell_pepper, liver_spread, garlic, onion]).
-expanded_recipe(beef_mechado, dinner, [beef, tomato_sauce, potato, carrot, soy_sauce, calamansi, garlic, onion]).
-expanded_recipe(chicken_afritada, dinner, [chicken, tomato_sauce, potato, carrot, bell_pepper, peas, garlic, onion]).
+expanded_recipe(kare_kare, dinner,
+     [oxtail, ground_peanuts, peanut_butter, ground_rice, annatto, eggplant,
+      sitaw, bok_choy, banana_blossom, shrimp_paste, garlic, onion, water,
+      salt, black_pepper]).
+expanded_recipe(beef_caldereta, dinner,
+     [beef, beef_cube, tomato_sauce, potato, carrot, bell_pepper,
+      liver_spread, garlic, onion, red_pepper, water, oil, salt, black_pepper]).
+expanded_recipe(beef_mechado, dinner,
+     [beef, tomato_sauce, potato, soy_sauce, lemon, bay_leaf, garlic, onion,
+      water, oil, salt, black_pepper]).
+expanded_recipe(chicken_afritada, dinner,
+     [chicken, tomato_sauce, potato, carrot, hotdog, peas, bay_leaf,
+      red_onion, garlic, chicken_broth, sugar, oil, salt, black_pepper]).
 expanded_recipe(pork_menudo, dinner, [pork, pork_liver, tomato_sauce, potato, carrot, bell_pepper, raisins, garlic]).
 expanded_recipe(chicken_menudo, dinner, [chicken, chicken_liver, tomato_sauce, potato, carrot, bell_pepper, raisins, garlic]).
 expanded_recipe(pork_sisig, dinner, [pork, pork_liver, onion, calamansi, chili, mayonnaise, soy_sauce]).
@@ -305,13 +553,16 @@ expanded_recipe(ginataang_langka, dinner, [young_jackfruit, coconut_milk, pork, 
 expanded_recipe(ginataang_talong, dinner, [eggplant, coconut_milk, shrimp_paste, garlic, onion, chili]).
 expanded_recipe(adobong_kangkong, dinner, [kangkong, soy_sauce, vinegar, garlic, black_pepper, oil]).
 expanded_recipe(chopsuey, dinner, [chicken, shrimp, cabbage, carrot, cauliflower, bell_pepper, soy_sauce, cornstarch]).
-expanded_recipe(lumpiang_shanghai, snack, [ground_pork, carrot, onion, garlic, egg, spring_onion, wrapper, oil]).
+expanded_recipe(lumpiang_shanghai, snack,
+     [ground_pork, pork_cube, wrapper, carrot, onion, egg, parsley,
+      black_pepper, salt, sesame_oil, garlic_powder, oil]).
 expanded_recipe(lumpiang_sariwa, snack, [wrapper, heart_of_palm, carrot, cabbage, tofu, peanut_butter, garlic, egg]).
 expanded_recipe(lumpiang_togue, snack, [wrapper, bean_sprouts, tofu, carrot, garlic, onion, soy_sauce, oil]).
 expanded_recipe(tokwa_baboy, snack, [tofu, pork, vinegar, soy_sauce, onion, garlic, black_pepper, oil]).
-expanded_recipe(kwek_kwek, snack, [quail_egg, flour, cornstarch, annatto, water, oil]).
+expanded_recipe(kwek_kwek, snack,
+     [quail_egg, flour, cornstarch, annatto, water, salt, black_pepper, oil]).
 expanded_recipe(okoy, snack, [shrimp, squash, carrot, bean_sprouts, flour, egg, water, oil]).
-expanded_recipe(turon, snack, [saba_banana, jackfruit, brown_sugar, wrapper, oil]).
+expanded_recipe(turon, snack, [saba_banana, jackfruit, sugar, wrapper, oil]).
 expanded_recipe(banana_cue, snack, [saba_banana, brown_sugar, oil]).
 expanded_recipe(camote_cue, snack, [sweet_potato, brown_sugar, oil]).
 expanded_recipe(ukoy, snack, [shrimp, bean_sprouts, squash, flour, egg, water, oil]).

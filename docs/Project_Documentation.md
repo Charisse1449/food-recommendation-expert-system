@@ -12,7 +12,7 @@ The Food Recommendation Expert System helps users find recipes that fit the ingr
 
 The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app.
 
-The knowledge base contains **142 recipes and 209 distinct ingredients across eight categories**. The original 42 recipes and the first ten expanded noodle recipes have measured ingredient lists, servings, and cooking steps. The other 90 expanded recipes currently provide required ingredients for matching and ingredient display.
+The knowledge base contains **142 recipes and 220 distinct ingredients across eight categories**. The expanded catalog includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The original 42 recipes and 25 expanded recipes have measured ingredient lists, servings, and cooking steps. The other 75 expanded recipes currently provide required ingredients for matching and ingredient display.
 
 ## 2. Implementation and Prolog Logic
 
@@ -35,7 +35,7 @@ Recipe facts and matching and ranking decisions are maintained in `src/prolog/kn
 - `recommend/3` applies category matching and strict ingredient matching.
 - `recommendation_match/5` calculates a match percentage and identifies missing ingredients.
 - `ranked_recommendations/3` builds candidate results and sorts them by score, then dish name.
-- `recipe_details/4` stores measured ingredient lists, servings, and cooking steps for the original recipes and ten source-based expanded noodle dishes. Other expanded catalog entries supply ingredient requirements used for matching.
+- `recipe_details/4` stores ingredient lists, servings, and cooking steps for recipes with available details. These include the original recipes and 25 expanded Filipino recipes. Other expanded catalog entries supply ingredient requirements used for matching.
 
 These predicates demonstrate knowledge representation, unification, backtracking over recipe facts, recursion, list processing, and negation.
 
@@ -70,7 +70,7 @@ Open PowerShell in the project directory and execute:
 
 Open the following address in a browser:
 
-[http://127.0.0.1:8000](http://127.0.0.1:8000)
+http://127.0.0.1:8000
 
 To stop the server, press `Ctrl+C` in PowerShell.
 
@@ -92,7 +92,7 @@ Execute the following command in PowerShell:
 & "C:\Program Files\swipl\bin\swipl.exe" -q -s tests/tests.pl -g run_tests -t halt
 ```
 
-The **69-test PlUnit suite passed**.
+The **69-test PlUnit suite passed** during project testing.
 
 ### Representative Test Results
 
@@ -115,11 +115,11 @@ To be completed by the group before final submission.
 
 ### GitHub Repository
 
-[https://github.com/Charisse1449/food-recommendation-expert-system](https://github.com/Charisse1449/food-recommendation-expert-system)
+https://github.com/Charisse1449/food-recommendation-expert-system
 
 ### Recipe Sources
 
-Simplified ingredient lists are referenced in [`sources.md`](sources.md), including:
+Simplified ingredient lists are referenced in `sources.md`, including:
 
 - BBC Good Food
 - Panlasang Pinoy, including the three Bangus recipes

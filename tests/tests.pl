@@ -258,11 +258,15 @@ test(expanded_recommendations_use_their_ingredients) :-
               [cornstarch, coconut_milk, evaporated_milk, sweet_corn,
                sugar, cheese]).
 
-test(source_based_noodle_recipes_have_details) :-
+test(source_based_expanded_recipes_have_details) :-
     forall(member(Dish, [pancit_bihon, pancit_canton, pancit_palabok,
                          pancit_lomi, pancit_malabon, pancit_sotanghon,
                          pancit_miki, pancit_miswa, pancit_chami,
-                         pancit_batil_patong]),
+                         pancit_batil_patong, arroz_caldo, goto, lugaw,
+                         champorado, tapsilog, tocilog, longsilog, hotsilog,
+                         kare_kare, beef_caldereta, beef_mechado,
+                         chicken_afritada, lumpiang_shanghai, kwek_kwek,
+                         turon]),
            (recipe_details(Dish, Servings, Ingredients, Steps),
             Servings > 0, Ingredients = [_|_], Steps = [_|_])).
 

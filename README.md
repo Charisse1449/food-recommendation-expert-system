@@ -1,3 +1,4 @@
+
 # Food Recommendation Expert System
 
 A food recommendation application in which SWI-Prolog checks recipes against the ingredients a user has. The browser interface is optional: the recommendation rules and knowledge base run in Prolog, and the original console program is still available.
@@ -8,13 +9,12 @@ A food recommendation application in which SWI-Prolog checks recipes against the
 - Rank partial matches by the percentage of required ingredients available and show what is missing.
 - Search and select available ingredients with checkboxes on the Recommend Food page.
 - Open recipe details inside the app without leaving the page.
-- Open recipe details inside the app. The original 42 recipes include measured ingredient quantities and cooking steps; the expanded catalog shows required ingredients for matching.
-- View measured ingredient quantities and cooking steps for recipes with available details. Non-Bangus quantities are clearly marked as estimates. Newly added recipes currently provide their required ingredient lists.
+- View measured ingredient quantities, serving counts, and cooking steps for recipes with available details.
 - Open recipe details from recommendation results or saved favorites.
 - Keep favorites and recommendation history in the browser.
 - Run the rules directly in SWI-Prolog or through the local HTTP/JSON interface.
 
-The knowledge base currently contains **142 Filipino recipes, 209 distinct ingredients, and eight categories**. This includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The expanded catalog provides ingredient matching for all 100 additions; ten now include measured quantities and cooking steps, while those details remain to be added for 90. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
+The knowledge base currently contains **142 Filipino recipes, 220 distinct ingredients, and eight categories**. This includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The expanded catalog provides ingredient matching for all 100 additions; 25 include measured ingredients, servings, and cooking steps, while the remaining 75 currently provide their required ingredient lists for matching. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
 
 ## Repository Structure
 
@@ -83,7 +83,7 @@ The project demonstrates several course concepts:
 - **Recursion and list processing:** `has_all_ingredients/2` recursively checks the recipe's required-ingredient list.
 - **Negation:** `score_ingredients/6` uses negation to collect required ingredients the user does not have.
 - **Decision and ranking:** `ranked_recommendations/3` scores candidates and sorts them by score, then dish name.
-- **Recipe details:** `recipe_details/4` stores ingredient quantities, serving counts, and cooking steps for recipes with available details. Original recipes have measured details where available, while non-Bangus quantities are marked as estimates. Newly expanded catalog entries expose their required ingredients and can be recommended, but do not yet include measured recipe instructions.
+- **Recipe details:** `recipe_details/4` stores ingredient lists, serving counts, and cooking steps for recipes with available details. These include the original recipes and 25 expanded Filipino recipes. Other expanded entries currently expose their required ingredients for matching.
 
 Open the knowledge base directly with:
 
