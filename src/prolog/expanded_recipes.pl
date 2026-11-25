@@ -1029,3 +1029,95 @@ recipe_details(lumpiang_togue, 6,
       "Add dried shrimp and cook 1 minute. Stir in tofu, fish sauce, and black pepper.",
       "Add bean sprouts and cook 2 minutes; add carrot and cook 1 to 2 minutes. Remove filling and cool.",
       "Wrap filling in lumpia wrappers. Deep-fry in remaining oil until golden; drain and serve with vinegar dip."]).
+
+% Additional measured recipe cards, based on the linked source recipes in docs/sources.md.
+recipe_details(tokwa_baboy, 6,
+ [item("1", "pound", "pork belly or ears", false), item("1", "pound", "firm tofu", false), item("1/2", "cup", "vinegar", false), item("1/4", "cup", "soy sauce", false), item("1", "piece", "onion", false), item("2", "cups", "cooking oil", false)],
+ ["Simmer pork in water until tender, then slice. Fry tofu until golden.", "Mix vinegar, soy sauce, onion, pepper, and chili for the dip. Serve pork and tofu with sauce."]).
+recipe_details(okoy, 4,
+ [item("1", "cup", "small shrimp", false), item("1", "cup", "cornstarch", false), item("1/4", "cup", "flour", false), item("1 1/2", "cups", "bean sprouts", false), item("1", "piece", "egg", false), item("1 1/4", "cups", "water", false), item("2", "cups", "oil", false)],
+ ["Whisk cornstarch, flour, egg, water, salt, and pepper into a batter; fold in shrimp and sprouts.", "Spoon into hot oil and fry both sides until crisp and cooked through. Drain and serve."]).
+recipe_details(banana_cue, 6,
+ [item("6", "pieces", "saba banana", false), item("2", "cups", "brown sugar", false), item("4", "cups", "oil", false)],
+ ["Heat oil in a deep pan and fry peeled saba bananas until lightly browned.", "Add brown sugar and turn bananas until coated and caramelized. Drain and skewer."]).
+recipe_details(camote_cue, 4,
+ [item("1", "pound", "sweet potato", false), item("1", "cup", "brown sugar", false), item("1", "cup", "oil", false)],
+ ["Peel and cut sweet potato into chunks. Heat oil and add brown sugar.", "When sugar begins to float, fry sweet potato until tender and coated, turning often. Drain and skewer."]).
+recipe_details(ukoy, 4,
+ [item("1", "cup", "small shrimp", false), item("1", "cup", "cornstarch", false), item("1/4", "cup", "flour", false), item("1", "cup", "squash, grated", false), item("1", "piece", "egg", false), item("1 1/4", "cups", "water", false), item("2", "cups", "oil", false)],
+ ["Combine shrimp, grated squash, cornstarch, flour, egg, water, salt, and pepper.", "Fry spoonfuls in hot oil, flattening into fritters, until crisp on both sides."]).
+recipe_details(ensaladang_talong, 4,
+ [item("2", "pieces", "eggplant", false), item("1", "piece", "tomato", false), item("1", "piece", "onion", false), item("1/2", "cup", "vinegar", false), item("1/2", "teaspoon", "sugar", false)],
+ ["Grill eggplants until soft and charred; cool, peel, and slice.", "Combine with chopped tomato and onion. Dress with vinegar, sugar, salt, and pepper."]).
+recipe_details(ensaladang_pako, 4,
+ [item("4", "cups", "fiddlehead fern (pako)", false), item("1", "piece", "tomato", false), item("1", "piece", "red onion", false), item("2", "tablespoons", "salted egg", false), item("2", "tablespoons", "vinegar", false)],
+ ["Wash and blanch fiddlehead fern briefly; cool and drain well.", "Toss with tomato, onion, chopped salted egg, vinegar, and a little salt. Serve chilled."]).
+recipe_details(atchara, 8,
+ [item("3", "pounds", "green papaya, shredded", false), item("2", "pieces", "carrot", false), item("1", "piece", "red bell pepper", false), item("2", "cups", "vinegar", false), item("1 1/3", "cups", "sugar", false), item("1/2", "cup", "raisins", false)],
+ ["Salt shredded papaya, rest overnight, rinse, and squeeze dry. Combine with carrot, pepper, and raisins.", "Boil vinegar and sugar until dissolved; cool, pour over vegetables, and refrigerate in clean jars until pickled."]).
+recipe_details(bistek_tagalog, 4,
+ [item("1 1/2", "pounds", "beef sirloin", false), item("5", "tablespoons", "soy sauce", false), item("4", "pieces", "calamansi", false), item("3", "pieces", "onion", false), item("3", "cloves", "garlic", false), item("1", "cup", "water", false)],
+ ["Marinate sliced beef in soy sauce, calamansi, and pepper for at least 1 hour.", "Brown onion rings and beef in oil. Add garlic, marinade, and water; simmer until tender and serve with onions."]).
+recipe_details(beef_salpicao, 4,
+ [item("1 1/2", "pounds", "beef tenderloin", false), item("1", "head", "garlic", false), item("5", "tablespoons", "Worcestershire sauce", false), item("2", "tablespoons", "oyster sauce", false), item("3", "tablespoons", "butter", false), item("1/4", "cup", "olive oil", false)],
+ ["Toss cubed beef with Worcestershire, oyster sauce, and pepper for 10 minutes.", "Brown garlic in oil, sear beef quickly over high heat, then toss with butter and serve immediately."]).
+recipe_details(beef_morcon, 6,
+ [item("2", "pounds", "beef flank", false), item("4", "pieces", "hotdog", false), item("2", "pieces", "pickle", false), item("3", "pieces", "hard-boiled egg", false), item("1", "piece", "carrot", false), item("1/2", "cup", "soy sauce", false)],
+ ["Pound beef into a thin sheet and marinate in soy sauce and citrus. Arrange hotdog, pickle, carrot, egg, and cheese; roll and tie.", "Brown the roll, add broth and marinade, cover, and braise until tender. Rest before slicing."]).
+recipe_details(beef_pares, 6,
+ [item("3", "pounds", "beef chuck", false), item("3", "pieces", "star anise", false), item("1/4", "cup", "soy sauce", false), item("3", "tablespoons", "brown sugar", false), item("3", "cloves", "garlic", false), item("3", "quarts", "water", false)],
+ ["Brown beef with garlic, onion, and ginger. Add water, soy, star anise, and sugar.", "Cover and gently simmer until beef is tender, about 2 hours. Season and serve with rice."]).
+recipe_details(dinuguan, 4,
+ [item("1", "pound", "pork", false), item("10", "ounces", "pork blood", false), item("1", "cup", "vinegar", false), item("1", "piece", "onion", false), item("1", "cup", "water", false), item("2", "pieces", "long green pepper", false)],
+ ["Sauté garlic and onion in oil; add pork and brown. Add water and simmer until tender.", "Stir in pork blood gradually and cook gently. Add vinegar, sugar, and green pepper; simmer until fully cooked."]).
+recipe_details(dinakdakan, 6,
+ [item("1", "pound", "pig ears", false), item("1", "pound", "pig face", false), item("6", "ounces", "pork liver", false), item("1/2", "cup", "mayonnaise", false), item("4", "tablespoons", "vinegar", false), item("1", "piece", "red onion", false)],
+ ["Simmer ears and face until tender, then grill with liver until lightly charred and cooked.", "Slice the meat. Mix mayonnaise, vinegar, onion, chili, salt, and pepper; toss together and serve."]).
+recipe_details(bopis, 6,
+ [item("3", "pounds", "pork lungs", false), item("1", "piece", "carrot", false), item("1", "piece", "tomato", false), item("5", "tablespoons", "vinegar", false), item("1", "piece", "onion", false), item("5", "pieces", "bay leaf", false)],
+ ["Boil cleaned lungs with bay leaves until tender; cool and dice.", "Sauté garlic, onion, and ginger; add lungs, vinegar, broth, carrot, chili, and annatto. Simmer until reduced and season."]).
+recipe_details(embutido, 6,
+ [item("2", "pounds", "ground pork", false), item("2", "pieces", "egg", false), item("1/2", "cup", "raisins", false), item("1", "piece", "carrot", false), item("1/2", "cup", "pickle relish", false), item("1/2", "cup", "bread crumbs", false)],
+ ["Mix pork with beaten eggs, breadcrumbs, carrot, raisins, relish, cheese, and seasonings.", "Shape in foil with boiled egg and sausage filling. Steam about 1 hour; cool before slicing."]).
+recipe_details(humba, 6,
+ [item("2", "pounds", "pork belly", false), item("1/4", "cup", "soy sauce", false), item("1/2", "cup", "vinegar", false), item("1/2", "cup", "brown sugar", false), item("1/4", "cup", "black beans", false), item("4", "cloves", "garlic", false)],
+ ["Brown pork belly with garlic. Add soy sauce, vinegar, water, peppercorn, and bay leaves; bring to a boil.", "Cover and braise until tender. Add brown sugar, salted black beans, and banana blossom; simmer until glazed."]).
+recipe_details(paksiw_na_lechon, 4,
+ [item("1", "pound", "roasted lechon", false), item("2", "cups", "lechon sauce", false), item("1/4", "cup", "vinegar", false), item("3", "tablespoons", "soy sauce", false), item("4", "cloves", "garlic", false), item("4", "pieces", "bay leaf", false)],
+ ["Sauté garlic and onion. Add lechon, lechon sauce, water, soy, peppercorn, and bay leaves; simmer until tender.", "Add vinegar and sugar; cook until the sauce thickens and coats the pork."]).
+recipe_details(pork_chicharon, 4,
+ [item("1", "pound", "pork rind", false), item("1", "teaspoon", "salt", false), item("4", "cups", "water", false), item("3", "cups", "oil", false)],
+ ["Simmer pork rind in salted water until tender. Drain, cut into pieces, and dry completely.", "Deep-fry in batches until puffed and crisp. Drain and season with salt."]).
+recipe_details(chicken_inasal, 4,
+ [item("1", "whole", "chicken", false), item("3", "tablespoons", "calamansi juice", false), item("3", "tablespoons", "vinegar", false), item("1", "tablespoon", "lemongrass", false), item("1", "tablespoon", "ginger", false), item("1/2", "cup", "chicken oil", false)],
+ ["Marinate chicken with calamansi, vinegar, garlic, ginger, lemongrass, salt, pepper, and soda for 3 hours.", "Grill, turning and basting with annatto chicken oil, until browned and cooked through."]).
+recipe_details(chicken_galantina, 6,
+ [item("1", "whole", "deboned chicken", false), item("1", "pound", "ground pork", false), item("2", "pieces", "egg", false), item("1/2", "cup", "raisins", false), item("3/4", "cup", "ham", false), item("5", "tablespoons", "breadcrumbs", false)],
+ ["Season deboned chicken. Combine pork, egg, ham, raisins, vegetables, relish, and breadcrumbs for stuffing.", "Fill and sew or tie the chicken closed. Steam about 90 minutes; chill before slicing."]).
+recipe_details(chicken_binakol, 4,
+ [item("1 1/2", "pounds", "chicken", false), item("4", "cups", "coconut water", false), item("1", "cup", "young coconut meat", false), item("1", "stalk", "lemongrass", false), item("1", "piece", "ginger", false), item("1", "piece", "green papaya", false)],
+ ["Sauté ginger, onion, and chicken until lightly browned. Add coconut water and bruised lemongrass.", "Simmer until chicken is tender; add papaya and coconut meat and cook until vegetables soften."]).
+recipe_details(chicken_pastel, 6,
+ [item("2", "pounds", "chicken breast", false), item("2", "pieces", "chorizo", false), item("3", "pieces", "beef frank", false), item("3/4", "cup", "mushroom", false), item("1", "piece", "potato", false), item("8", "ounces", "table cream", false)],
+ ["Marinate chicken in soy sauce and citrus. Sauté garlic, onion, and chorizo; brown the chicken.", "Add broth and simmer. Add franks, potato, carrot, mushrooms, and cream; cook until vegetables are tender."]).
+recipe_details(chicken_curry_pinoy, 6,
+ [item("2", "pounds", "chicken", false), item("1", "cup", "coconut milk", false), item("2", "pieces", "potato", false), item("1", "piece", "bell pepper", false), item("1", "tablespoon", "curry powder", false), item("1", "piece", "onion", false)],
+ ["Pan-fry potato and chicken until lightly browned; set aside. Sauté garlic, onion, ginger, and curry powder.", "Return chicken, add water and fish sauce, and simmer until tender. Add coconut milk and pepper; cook until creamy."]).
+recipe_details(chicken_pochero, 6,
+ [item("2", "pounds", "chicken", false), item("2", "pieces", "chorizo", false), item("3", "pieces", "saba banana", false), item("2", "pieces", "potato", false), item("1/2", "head", "cabbage", false), item("8", "ounces", "tomato sauce", false)],
+ ["Sauté garlic, onion, and tomato; brown chicken and chorizo. Add tomato sauce, water, and broth; simmer.", "Add potato, chickpeas, and green beans. When tender, add saba and cabbage and cook through."]).
+recipe_details(chicken_hamonado, 4,
+ [item("2", "pounds", "chicken", false), item("20", "ounces", "pineapple", false), item("1/4", "cup", "soy sauce", false), item("3", "tablespoons", "brown sugar", false), item("1", "piece", "onion", false), item("4", "cloves", "garlic", false)],
+ ["Marinate chicken overnight in pineapple juice and soy sauce. Brown chicken in oil.", "Sauté garlic and onion; add marinade and simmer until chicken is tender. Add pineapple and brown sugar; reduce sauce."]).
+recipe_details(chicken_relleno, 6,
+ [item("1", "whole", "deboned chicken", false), item("1/4", "pound", "ground pork", false), item("3", "pieces", "egg", false), item("3/4", "cup", "raisins", false), item("3", "slices", "ham", false), item("1/2", "cup", "cheese", false)],
+ ["Marinate deboned chicken in soy sauce and citrus. Mix pork, eggs, ham, cheese, raisins, and seasonings for stuffing.", "Fill chicken, place boiled eggs inside, secure the opening, and bake until the thickest part is fully cooked."]).
+recipe_details(escabecheng_tilapia, 4,
+ [item("2", "pounds", "tilapia", false), item("3", "tablespoons", "vinegar", false), item("4", "tablespoons", "banana ketchup", false), item("1", "piece", "carrot", false), item("1", "piece", "bell pepper", false), item("1", "tablespoon", "cornstarch", false)],
+ ["Season and fry fish until golden; transfer to a serving dish.", "Sauté garlic, onion, ginger, and vegetables. Add vinegar, ketchup, sugar, and water; thicken with cornstarch and pour over fish."]).
+recipe_details(tilapia_in_tomato, 4,
+ [item("2", "pieces", "tilapia", false), item("3", "pieces", "tomato", false), item("1", "piece", "onion", false), item("1", "piece", "ginger", false), item("2", "cloves", "garlic", false), item("1", "tablespoon", "fish sauce", false)],
+ ["Sauté garlic, onion, ginger, and tomato until soft and saucy.", "Add seasoned tilapia and a little water. Cover and simmer gently until fish is cooked; season with fish sauce."]).
+recipe_details(paksiw_na_isda, 4,
+ [item("2", "pieces", "whole fish", false), item("1/2", "cup", "vinegar", false), item("1", "cup", "water", false), item("1", "piece", "ginger", false), item("6", "cloves", "garlic", false), item("1", "piece", "bitter melon", true)],
+ ["Arrange fish in a pot with vinegar, water, ginger, garlic, onion, peppercorn, and salt.", "Bring to a boil without stirring, then cover and simmer until fish is cooked. Add chili and optional bitter melon."]).
