@@ -10,7 +10,7 @@ Objectives:
 2. Recommend exact and partial recipe matches, explaining missing ingredients.
 3. Provide a usable web interface while keeping the reasoning available for direct Prolog queries.
 
-The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app. All 37 recipes have measured ingredient lists, serving counts, and cooking steps. Bangus recipe measurements are based on cited recipes; the other recipes are marked as practical estimates. The knowledge base contains seven categories.
+The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app. The knowledge base contains 142 recipes and 182 distinct ingredients across eight categories. The original 42 recipes have measured ingredient lists, serving counts, and cooking steps; 100 added Filipino recipes currently provide required ingredients for matching and ingredient display.
 
 ## 2. Implementation & Prolog logic
 
@@ -25,7 +25,7 @@ Important predicates:
 - `recommend/3` applies category matching and strict ingredient matching.
 - `recommendation_match/5` calculates a match percentage and the missing ingredients.
 - `ranked_recommendations/3` builds candidate results and sorts them by score, then dish name.
-- `recipe_details/4` stores measured ingredient lists, servings, and cooking steps for every recipe; non-Bangus quantities are estimates.
+- `recipe_details/4` stores measured ingredient lists, servings, and cooking steps for the original recipes. The expanded catalog supplies the ingredient requirements used for matching.
 
 These predicates demonstrate knowledge representation, unification, backtracking over recipe facts, recursion, list processing, and negation.
 
@@ -56,7 +56,7 @@ Run automated tests with:
 swipl -q -s tests/tests.pl -g run_tests -t halt
 ```
 
-The 60-test PlUnit suite passed. Representative test results:
+The 68-test PlUnit suite passed. Representative test results:
 
 | Test | Input | Actual result |
 |---|---|---|
