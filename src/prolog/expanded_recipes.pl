@@ -1,6 +1,7 @@
 % Additional Filipino dishes. Ingredient lists supply matching requirements;
 % measured recipe details are supplied for selected dishes below.
 :- multifile recipe_details/4.
+:- discontiguous recipe_details/4.
 :- discontiguous expanded_recipe/3.
 expanded_recipe(pancit_bihon, dinner,
      [rice_noodles, pork, chicken, snow_peas, carrot, cabbage, celery,
@@ -522,7 +523,8 @@ expanded_recipe(longsilog, breakfast,
      [longanisa, rice, garlic, egg, oil, water, salt, black_pepper]).
 expanded_recipe(hotsilog, breakfast,
      [hotdog, rice, egg, tomato, oil, water]).
-expanded_recipe(hotsilog_cheese, breakfast, [hotdog, cheese, rice, egg, garlic, oil]).
+expanded_recipe(hotsilog_cheese, breakfast,
+     [hotdog, cheese, rice, egg, tomato, water, oil]).
 expanded_recipe(kare_kare, dinner,
      [oxtail, ground_peanuts, peanut_butter, ground_rice, annatto, eggplant,
       sitaw, bok_choy, banana_blossom, shrimp_paste, garlic, onion, water,
@@ -536,28 +538,71 @@ expanded_recipe(beef_mechado, dinner,
 expanded_recipe(chicken_afritada, dinner,
      [chicken, tomato_sauce, potato, carrot, hotdog, peas, bay_leaf,
       red_onion, garlic, chicken_broth, sugar, oil, salt, black_pepper]).
-expanded_recipe(pork_menudo, dinner, [pork, pork_liver, tomato_sauce, potato, carrot, bell_pepper, raisins, garlic]).
-expanded_recipe(chicken_menudo, dinner, [chicken, chicken_liver, tomato_sauce, potato, carrot, bell_pepper, raisins, garlic]).
-expanded_recipe(pork_sisig, dinner, [pork, pork_liver, onion, calamansi, chili, mayonnaise, soy_sauce]).
-expanded_recipe(chicken_sisig, dinner, [chicken, chicken_liver, onion, calamansi, chili, mayonnaise, soy_sauce]).
-expanded_recipe(lechon_kawali, dinner, [pork_belly, salt, bay_leaf, garlic, black_pepper, oil]).
-expanded_recipe(crispy_pata, dinner, [pork_hock, garlic, bay_leaf, black_pepper, salt, oil]).
-expanded_recipe(bulalo, soup, [beef_shank, corn, cabbage, pechay, onion, black_pepper, fish_sauce, water]).
-expanded_recipe(nilagang_baka, soup, [beef, potato, cabbage, pechay, corn, onion, black_pepper, fish_sauce]).
-expanded_recipe(pochero, soup, [beef, chorizo, saba_banana, potato, cabbage, tomato_sauce, chickpeas, onion]).
-expanded_recipe(pork_pochero, dinner, [pork, chorizo, saba_banana, potato, cabbage, tomato_sauce, chickpeas, onion]).
-expanded_recipe(pinakbet, dinner, [pork, shrimp_paste, squash, eggplant, ampalaya, sitaw, tomato, onion]).
-expanded_recipe(pinakbet_tagalog, dinner, [pork, shrimp_paste, squash, eggplant, ampalaya, sitaw, okra, tomato]).
-expanded_recipe(laing, dinner, [dried_taro_leaves, coconut_milk, pork, shrimp_paste, ginger, garlic, chili]).
-expanded_recipe(ginataang_langka, dinner, [young_jackfruit, coconut_milk, pork, shrimp_paste, garlic, onion, chili]).
-expanded_recipe(ginataang_talong, dinner, [eggplant, coconut_milk, shrimp_paste, garlic, onion, chili]).
-expanded_recipe(adobong_kangkong, dinner, [kangkong, soy_sauce, vinegar, garlic, black_pepper, oil]).
-expanded_recipe(chopsuey, dinner, [chicken, shrimp, cabbage, carrot, cauliflower, bell_pepper, soy_sauce, cornstarch]).
+expanded_recipe(pork_menudo, dinner,
+     [pork, pork_liver, potato, carrot, soy_sauce, lemon, onion, garlic,
+      sugar, tomato_sauce, water, hotdog, oil, bay_leaf, salt, black_pepper]).
+expanded_recipe(chicken_menudo, dinner,
+     [chicken, soy_sauce, calamansi, oil, potato, carrot, hotdog, garlic,
+      onion, tomato_paste, water, bay_leaf, liver_spread, seasoning_mix,
+      black_pepper]).
+expanded_recipe(pork_sisig, dinner,
+     [pork_ears, pork_snout, pork_belly, onion, bay_leaf, salt, ginger,
+      water, mayonnaise, vinegar, black_pepper, sugar, liver_spread,
+      calamansi, liquid_seasoning]).
+expanded_recipe(chicken_sisig, dinner,
+     [chicken, chicken_liver, onion, garlic_powder, chili, soy_sauce, butter,
+      mayonnaise, egg, oil, salt, black_pepper]).
+expanded_recipe(lechon_kawali, dinner,
+     [pork_belly, pork_cube, bay_leaf, peppercorn, liquid_seasoning, water, oil]).
+expanded_recipe(crispy_pata, dinner,
+     [pork_hock, bay_leaf, peppercorn, star_anise, salt, black_pepper,
+      garlic_powder, water, oil]).
+expanded_recipe(bulalo, soup,
+     [beef_shank, cabbage, bok_choy, corn, peppercorn, green_onion, onion,
+      water, fish_sauce]).
+expanded_recipe(nilagang_baka, soup,
+     [beef, bok_choy, cabbage, saba_banana, potato, onion, celery,
+      star_anise, beef_broth, water, salt, black_pepper]).
+expanded_recipe(pochero, soup,
+     [beef, chorizo, saba_banana, potato, cabbage, bok_choy, sitaw,
+      chickpeas, tomato, onion, peppercorn, fish_sauce, garlic,
+      tomato_sauce, water, oil]).
+expanded_recipe(pork_pochero, dinner,
+     [pork_belly, chinese_sausage, tomato, garlic, onion, saba_banana,
+      bok_choy, green_beans, potato, water, tomato_sauce, pork_cube, oil,
+      salt, black_pepper]).
+expanded_recipe(pinakbet, dinner,
+     [eggplant, ampalaya, sitaw, sweet_potato, okra, tomato, onion,
+      water, bagnet, anchovy_sauce]).
+expanded_recipe(pinakbet_tagalog, dinner,
+     [lechon_kawali, shrimp_cube, sitaw, squash, okra, eggplant, ampalaya,
+      sweet_potato, tomato, ginger, onion, garlic, shrimp_paste, water,
+      oil, black_pepper]).
+expanded_recipe(laing, dinner,
+     [dried_taro_leaves, coconut_milk, coconut_cream, shrimp_paste, pork,
+      chili, onion, ginger, garlic]).
+expanded_recipe(ginataang_langka, dinner,
+     [young_jackfruit, pork, coconut_milk, chili, onion, garlic, fish_sauce,
+      black_pepper, oil]).
+expanded_recipe(ginataang_talong, dinner,
+     [eggplant, coconut_mix, tofu, malunggay, water, onion, garlic, oil,
+      black_pepper, salt]).
+expanded_recipe(adobong_kangkong, dinner,
+     [kangkong, onion, garlic, soy_sauce, vinegar, water, oil, black_pepper]).
+expanded_recipe(chopsuey, dinner,
+     [shrimp, chicken, garlic, cornstarch, oyster_sauce, cabbage,
+      green_bell_pepper, red_bell_pepper, cauliflower, snow_peas, carrot,
+      onion, chicken_liver, shrimp_juice, water, salt, black_pepper]).
 expanded_recipe(lumpiang_shanghai, snack,
      [ground_pork, pork_cube, wrapper, carrot, onion, egg, parsley,
       black_pepper, salt, sesame_oil, garlic_powder, oil]).
-expanded_recipe(lumpiang_sariwa, snack, [wrapper, heart_of_palm, carrot, cabbage, tofu, peanut_butter, garlic, egg]).
-expanded_recipe(lumpiang_togue, snack, [wrapper, bean_sprouts, tofu, carrot, garlic, onion, soy_sauce, oil]).
+expanded_recipe(lumpiang_sariwa, snack,
+     [sweet_potato, fish_sauce, cabbage, carrot, water, peanuts, lettuce,
+      pork, tofu, shrimp, sitaw, onion, cilantro, garlic, flour, egg, oil,
+      salt, milk, soy_sauce, brown_sugar, beef_powder, cornstarch, wrapper]).
+expanded_recipe(lumpiang_togue, snack,
+     [bean_sprouts, carrot, garlic, onion, dried_shrimp, tofu, black_pepper,
+      fish_sauce, wrapper, oil]).
 expanded_recipe(tokwa_baboy, snack, [tofu, pork, vinegar, soy_sauce, onion, garlic, black_pepper, oil]).
 expanded_recipe(kwek_kwek, snack,
      [quail_egg, flour, cornstarch, annatto, water, salt, black_pepper, oil]).
@@ -616,3 +661,371 @@ expanded_recipe(leche_flan, dessert, [egg_yolk, condensed_milk, evaporated_milk,
 expanded_recipe(ube_halaya, dessert, [ube, coconut_milk, condensed_milk, butter, sugar]).
 expanded_recipe(maja_blanca, dessert, [cornstarch, coconut_milk, evaporated_milk, sweet_corn, sugar, cheese]).
 expanded_recipe(bibingka, dessert, [rice_flour, coconut_milk, egg, sugar, butter, salted_egg, cheese]).
+
+% Source-based recipe cards added in the second details batch.
+recipe_details(hotsilog_cheese, 1,
+     [item("3", "pieces", "red hotdogs", false),
+      item("2", "pieces", "eggs", false),
+      item("1", "cup", "garlic fried rice", false),
+      item("1", "medium", "tomato, sliced", false),
+      item("2", "slices", "cheddar cheese", false),
+      item("3/4", "cup", "water", false),
+      item("6", "tablespoons", "cooking oil", false)],
+     ["Boil water in a small pot. Add hotdogs and 2 tablespoons oil; cook until the water evaporates.",
+      "Roll and fry the hotdogs in the remaining oil for 1 to 2 minutes. Add cheddar over the hotdogs until melted.",
+      "Fry the eggs in the remaining oil.",
+      "Serve with garlic rice and sliced tomato."]).
+
+recipe_details(pork_menudo, 6,
+     [item("2", "pounds", "pork, cubed", false),
+      item("1/4", "pound", "pork liver, cubed", false),
+      item("1", "cup", "potatoes, diced", false),
+      item("1", "piece", "carrot, cubed", false),
+      item("1/2", "cup", "soy sauce", false),
+      item("1/2", "piece", "lemon", false),
+      item("1", "piece", "onion, chopped", false),
+      item("3", "cloves", "garlic, minced", false),
+      item("1", "teaspoon", "sugar", false),
+      item("3/4", "cup", "tomato sauce", false),
+      item("1", "cup", "water", false),
+      item("4", "pieces", "hotdogs, sliced", false),
+      item("2", "tablespoons", "cooking oil", false),
+      item("2 to 3", "pieces", "dried bay leaves", false),
+      item("to taste", "", "salt and pepper", false)],
+     ["Marinate pork in soy sauce and lemon for 30 minutes.",
+      "Heat oil and saute garlic and onion. Add pork and cook for 5 to 7 minutes.",
+      "Add tomato sauce, water, and bay leaves. Bring to a boil, then simmer 30 to 60 minutes until pork is tender.",
+      "Add liver and hotdogs; cook 5 minutes. Add potato, carrot, sugar, salt, and pepper; cook 8 to 12 minutes until vegetables are tender.",
+      "Serve hot with rice."]).
+
+recipe_details(chicken_menudo, 6,
+     [item("2", "pounds", "boneless chicken thighs, diced", false),
+      item("2", "tablespoons", "soy sauce", false),
+      item("1", "tablespoon", "calamansi juice", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("1", "piece", "medium potato, diced", false),
+      item("1", "piece", "medium carrot, diced", false),
+      item("3", "pieces", "hotdogs, sliced", false),
+      item("5", "cloves", "garlic, minced", false),
+      item("1", "piece", "medium onion, chopped", false),
+      item("3", "tablespoons", "tomato paste", false),
+      item("1", "cup", "water", false),
+      item("2", "pieces", "dried bay leaves", false),
+      item("1", "tablespoon", "liver spread", false),
+      item("1", "each", "red and green bell pepper, sliced", true),
+      item("6", "grams", "seasoning mix", false),
+      item("1", "teaspoon", "sugar", true),
+      item("to taste", "", "ground black pepper", false)],
+     ["Marinate chicken in soy sauce and calamansi juice for 20 to 30 minutes.",
+      "Fry potato and carrot in oil for 3 to 4 minutes; remove. Brown hotdogs for 1 to 2 minutes and remove.",
+      "Saute garlic and onion. Add chicken and brown for 5 to 6 minutes. Stir in tomato paste for 1 to 2 minutes.",
+      "Add water and bay leaves. Cover and simmer 15 to 18 minutes until chicken is cooked through.",
+      "Stir in liver spread. Return potato, carrot, and hotdogs; cook 7 to 8 minutes. Add optional bell peppers for 2 to 3 minutes, season, and serve."]).
+
+recipe_details(pork_sisig, 5,
+     [item("1", "pound", "pig ears", false),
+      item("1", "pound", "pig snout", false),
+      item("1", "pound", "pork belly", false),
+      item("2", "pieces", "onions, minced", false),
+      item("3", "pieces", "bay leaves", false),
+      item("2", "teaspoons", "salt", false),
+      item("4", "thumbs", "ginger, crushed", false),
+      item("1", "quart", "water", false),
+      item("1/2", "cup", "mayonnaise", false),
+      item("2", "tablespoons", "cane vinegar", false),
+      item("1/4", "teaspoon", "ground black pepper", false),
+      item("1", "teaspoon", "sugar", false),
+      item("1/4", "cup", "liver spread", false),
+      item("2", "pieces", "limes or calamansi", false),
+      item("1", "tablespoon", "liquid seasoning", false)],
+     ["Boil pig ears, snout, pork belly, ginger, bay leaves, salt, and water for 1 hour. Drain and cool.",
+      "Grill the meat about 5 minutes per side. Cool, then chop finely.",
+      "Mix mayonnaise, vinegar, pepper, sugar, liver spread, citrus juice, and liquid seasoning to make the dressing.",
+      "Toss chopped grilled pork with onion and dressing. Serve immediately."]).
+
+recipe_details(chicken_sisig, 3,
+     [item("1 1/2", "pounds", "grilled chicken breast, chopped", false),
+      item("1/4", "pound", "chicken liver, chopped", false),
+      item("1", "cup", "yellow onion, minced", false),
+      item("1", "teaspoon", "garlic powder", false),
+      item("2", "pieces", "serrano peppers, sliced", false),
+      item("2", "tablespoons", "soy sauce", false),
+      item("1/4", "cup", "butter", false),
+      item("4 to 5", "tablespoons", "mayonnaise", false),
+      item("1", "piece", "egg", false),
+      item("2", "tablespoons", "cooking oil", false),
+      item("to taste", "", "salt and pepper", false)],
+     ["Heat oil in a pan and saute onion until soft.",
+      "Add chicken liver and cook until browned. Add grilled chopped chicken and cook 3 to 4 minutes.",
+      "Stir in garlic powder, soy sauce, salt, and pepper. Add mayonnaise and mix until combined.",
+      "Heat a sizzling plate and melt butter on it. Transfer chicken mixture to the plate and top with a raw egg and sliced chili. Serve hot."]).
+
+recipe_details(lechon_kawali, 4,
+     [item("2", "pounds", "pork belly", false),
+      item("1", "piece", "pork bouillon cube", false),
+      item("5", "pieces", "dried bay leaves", false),
+      item("1", "tablespoon", "whole peppercorns", false),
+      item("1/4", "cup", "liquid seasoning", false),
+      item("8 to 10", "cups", "water", false),
+      item("4", "cups", "cooking oil", false)],
+     ["Bring water to a boil. Add peppercorns, bay leaves, bouillon, and pork belly. Cover and boil about 45 minutes until tender.",
+      "Remove pork and cool. Rub with liquid seasoning and let stand 30 minutes.",
+      "Heat oil to about 300°F. Carefully deep-fry pork 7 to 10 minutes per side, until crisp and browned.",
+      "Drain, rest briefly, slice, and serve with dipping sauce."]).
+
+recipe_details(crispy_pata, 4,
+     [item("1", "piece", "whole pork leg, cleaned", false),
+      item("6", "pieces", "dried bay leaves", false),
+      item("2", "tablespoons", "whole peppercorns", false),
+      item("4", "pieces", "star anise", true),
+      item("6", "teaspoons", "salt", false),
+      item("2", "teaspoons", "ground black pepper", false),
+      item("2", "teaspoons", "garlic powder", false),
+      item("12", "cups", "water", false),
+      item("6", "cups", "cooking oil", false)],
+     ["Bring water to a boil with bay leaves, peppercorns, optional star anise, salt, pepper, and garlic powder.",
+      "Add pork leg and simmer until very tender, about 1 hour or longer as needed. Drain and cool completely.",
+      "Heat oil in a deep pot. Carefully fry the pork leg until golden and crisp, turning as needed. Drain well.",
+      "Rest briefly and serve with dipping sauce."]).
+
+recipe_details(bulalo, 4,
+     [item("2", "pounds", "beef shank", false),
+      item("1/2", "head", "cabbage, leaves separated", false),
+      item("1", "bundle", "bok choy", false),
+      item("2", "cobs", "corn, cut into thirds", false),
+      item("2", "tablespoons", "whole peppercorns", false),
+      item("1/2", "cup", "green onions, cut", false),
+      item("1", "piece", "onion", false),
+      item("34", "ounces", "water", false),
+      item("to taste", "", "fish sauce", true)],
+     ["Bring water to a boil in a large pot. Add beef shank, onion, and peppercorns.",
+      "Simmer about 1 1/2 hours, or pressure-cook about 30 minutes, until beef is tender.",
+      "Add corn and simmer 10 minutes. Add fish sauce, cabbage, bok choy, and green onion.",
+      "Cook until vegetables are just tender. Serve hot."]).
+
+recipe_details(nilagang_baka, 6,
+     [item("2", "pounds", "beef sirloin, cubed", false),
+      item("2", "bunches", "baby bok choy or pechay", false),
+      item("1", "piece", "cabbage", false),
+      item("6", "pieces", "saba bananas, halved", false),
+      item("4", "pieces", "baking potatoes, quartered", false),
+      item("1", "piece", "white onion, halved", false),
+      item("4", "stalks", "celery, chopped", false),
+      item("1", "piece", "star anise", true),
+      item("4", "cups", "beef broth", false),
+      item("4", "cups", "water", false),
+      item("to taste", "", "salt and pepper", false)],
+     ["Bring water and beef broth to a boil. Add onion, star anise, and celery; cover and simmer 20 minutes, then remove the aromatics.",
+      "Add beef and simmer 60 to 90 minutes until tender, adding water if needed.",
+      "Add saba and potatoes; cook 10 minutes. Add bok choy, cabbage, salt, and pepper.",
+      "Cover, turn off heat, and let stand 2 to 5 minutes until vegetables are tender. Serve hot."]).
+
+recipe_details(pochero, 6,
+     [item("2", "pounds", "beef chuck", false),
+      item("1/2", "head", "cabbage, quartered", false),
+      item("1", "bunch", "bok choy or pechay", false),
+      item("12", "pieces", "long green beans", false),
+      item("1", "piece", "potato, cubed", false),
+      item("2", "pieces", "plantains or saba bananas", false),
+      item("3", "pieces", "chorizo de Bilbao, sliced", false),
+      item("1", "piece", "tomato, diced", false),
+      item("1", "piece", "onion, diced", false),
+      item("2", "tablespoons", "whole peppercorns", false),
+      item("1", "tablespoon", "fish sauce", false),
+      item("3", "cloves", "garlic", false),
+      item("8", "ounces", "tomato sauce", false),
+      item("3", "cups", "water", false),
+      item("15", "ounces", "chickpeas", false),
+      item("3", "tablespoons", "cooking oil", false)],
+     ["Heat oil in a pot and fry bananas until golden; set aside. Brown chorizo and set aside.",
+      "Saute garlic, onion, and tomato. Add beef and cook until lightly browned.",
+      "Stir in fish sauce, tomato sauce, peppercorns, and water. Bring to a boil, cover, and simmer until beef is tender.",
+      "Return chorizo and bananas. Add potato and chickpeas; simmer about 7 minutes.",
+      "Add cabbage and green beans; cook 5 minutes. Add bok choy, turn off heat, cover 5 minutes, then serve."]).
+
+recipe_details(pork_pochero, 5,
+     [item("1", "pound", "pork belly, cut into serving pieces", false),
+      item("2", "pieces", "Chinese sausage, sliced", false),
+      item("1", "large", "plum tomato", false),
+      item("4", "cloves", "garlic, crushed", false),
+      item("1", "large", "yellow onion, chopped", false),
+      item("4", "pieces", "saba bananas, halved", false),
+      item("2", "bunches", "bok choy", false),
+      item("8", "ounces", "green beans", false),
+      item("1", "large", "potato, cubed", false),
+      item("6 to 7", "cups", "water", false),
+      item("1", "can (8 ounces)", "tomato sauce", false),
+      item("2", "pieces", "pork bouillon cubes", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("to taste", "", "salt and ground black pepper", false)],
+     ["Heat oil in a pot. Saute garlic, onion, and tomato until softened.",
+      "Add Chinese sausage and pork; cook about 3 minutes until pork browns.",
+      "Add tomato sauce and water. Bring to a boil, add pork cubes, cover, and simmer on low about 50 minutes.",
+      "Add saba and potato; cover and cook 12 minutes. Add green beans and bok choy; cook 5 to 7 minutes.",
+      "Season with salt and pepper and serve hot."]).
+
+recipe_details(pinakbet, 4,
+     [item("4", "pieces", "round eggplant, halved", false),
+      item("2", "pieces", "small bitter melon, quartered", false),
+      item("1/2", "bundle", "string beans, cut", false),
+      item("1", "piece", "sweet potato, quartered", false),
+      item("8", "pieces", "okra", false),
+      item("1", "piece", "tomato, cubed", false),
+      item("1", "piece", "onion, cubed", false),
+      item("1 1/2", "cups", "water", false),
+      item("1", "pound", "bagnet or crispy pork belly", false),
+      item("1/4", "cup", "anchovy sauce", false)],
+     ["Bring water to a boil in a large pot. Add anchovy sauce and bring back to a boil.",
+      "Add sweet potato, okra, bitter melon, eggplant, string beans, tomato, and onion. Simmer 15 minutes until vegetables are tender.",
+      "Add cooked bagnet and simmer 5 minutes. Serve hot."]).
+
+recipe_details(pinakbet_tagalog, 4,
+     [item("1", "pound", "lechon kawali, sliced", false),
+      item("1", "piece", "shrimp bouillon cube", false),
+      item("12", "pieces", "string beans, cut", false),
+      item("1/2", "piece", "squash, cubed", false),
+      item("12", "pieces", "okra", false),
+      item("1", "piece", "Chinese eggplant, sliced", false),
+      item("1", "piece", "bitter melon, sliced", false),
+      item("1", "piece", "sweet potato, cubed", true),
+      item("2", "pieces", "tomatoes, cubed", false),
+      item("2", "thumbs", "ginger, crushed", true),
+      item("1", "piece", "onion, chopped", false),
+      item("4", "cloves", "garlic, crushed", false),
+      item("2", "teaspoons", "shrimp paste", false),
+      item("2 1/2", "cups", "water", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("1/4", "teaspoon", "ground black pepper", false)],
+     ["Saute onion and garlic in oil. Add optional ginger and cook until onion softens.",
+      "Add half the lechon kawali and saute 1 minute. Add water and bring to a boil; stir in shrimp cube, cover, and cook 20 minutes.",
+      "Add tomatoes and shrimp paste; cover and cook 3 minutes. Add squash and optional sweet potato; cook 7 minutes.",
+      "Add string beans, okra, bitter melon, and eggplant. Cover and cook 5 minutes.",
+      "Season with pepper, add remaining lechon kawali, and serve."]).
+
+recipe_details(laing, 8,
+     [item("3.5", "ounces", "dried taro leaves", false),
+      item("6", "cups", "coconut milk", false),
+      item("2", "cups", "coconut cream", false),
+      item("1/2", "cup", "shrimp paste", false),
+      item("1/2", "pound", "pork shoulder, thinly sliced", false),
+      item("5 to 7", "pieces", "red chilies", false),
+      item("1", "piece", "onion, sliced", false),
+      item("1/2", "cup", "ginger, sliced", false),
+      item("8", "cloves", "garlic, crushed", false)],
+     ["Combine coconut milk, pork, shrimp paste, ginger, onion, and garlic in a pot. Bring to a boil, stirring gently.",
+      "Cover and simmer 15 to 20 minutes, stirring occasionally so the mixture does not stick.",
+      "Add dried taro leaves without stirring. Let them absorb the liquid for 20 to 30 minutes, then gently mix.",
+      "Cook 10 more minutes. Add coconut cream and chilies; simmer 10 to 12 minutes until thick. Serve hot."]).
+
+recipe_details(ginataang_langka, 3,
+     [item("20", "ounces", "unripe jackfruit, chopped", false),
+      item("10", "ounces", "pork, cubed", false),
+      item("2", "cups", "coconut milk", false),
+      item("4", "pieces", "chili peppers, chopped", true),
+      item("1", "medium", "onion, sliced", false),
+      item("1", "teaspoon", "garlic, minced", false),
+      item("1", "tablespoon", "fish sauce", false),
+      item("1/4", "teaspoon", "ground black pepper", false),
+      item("2", "tablespoons", "cooking oil", false)],
+     ["Heat oil in a pan and saute onion and garlic.",
+      "Add pork and cook until medium brown.",
+      "Pour in coconut milk. Bring to a boil, cover, and simmer about 20 minutes until pork is tender; add water if needed.",
+      "Season with pepper, optional chili, and fish sauce. Add jackfruit and cook 5 to 7 minutes. Serve."]).
+
+recipe_details(ginataang_talong, 3,
+     [item("2", "pieces", "Chinese eggplant, sliced", false),
+      item("40", "grams", "coconut vegetable seasoning mix", false),
+      item("8", "ounces", "extra-firm tofu", false),
+      item("1", "cup", "malunggay leaves", false),
+      item("2", "cups", "water", false),
+      item("1", "piece", "onion, chopped", false),
+      item("4", "cloves", "garlic, chopped", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("to taste", "", "ground black pepper and salt", false)],
+     ["Heat oil and saute garlic and onion until softened.",
+      "Mix the coconut seasoning with water, then pour into the pan. Cover and bring to a boil.",
+      "Add eggplant, cover, and cook 8 minutes. Add tofu and cook 3 minutes.",
+      "Stir in malunggay leaves and cook 1 minute. Season with pepper and salt; serve."]).
+
+recipe_details(adobong_kangkong, 4,
+     [item("1", "bunch", "water spinach, leaves and stems separated", false),
+      item("1", "piece", "onion, chopped", false),
+      item("1", "head", "garlic, crushed and chopped", false),
+      item("1/4", "cup", "soy sauce", false),
+      item("1/8", "cup", "vinegar", false),
+      item("1/2", "cup", "water", true),
+      item("3", "tablespoons", "cooking oil", false),
+      item("to taste", "", "ground black pepper", false)],
+     ["Heat oil in a pan and saute garlic until golden. Reserve some garlic for garnish.",
+      "Add onion and saute until softened. Pour in soy sauce and vinegar and bring to a boil.",
+      "Add water spinach stems and cook 2 minutes. Add leaves, stir, cover, and cook about 1 minute.",
+      "Season with black pepper and garnish with reserved garlic. Serve."]).
+
+recipe_details(chopsuey, 4,
+     [item("1/4", "pound", "shrimp", false),
+      item("1/2", "pound", "boneless chicken", false),
+      item("1", "teaspoon", "garlic", false),
+      item("2", "teaspoons", "cornstarch", false),
+      item("1", "tablespoon", "oyster sauce", false),
+      item("1/2", "piece", "cabbage, quartered", false),
+      item("1", "cup", "green bell pepper, sliced", false),
+      item("1", "cup", "red bell pepper, sliced", false),
+      item("1", "small", "cauliflower, cut into pieces", false),
+      item("1 1/2", "cups", "snow peas", false),
+      item("1", "cup", "carrot, sliced", false),
+      item("1", "cup", "onion, diced", false),
+      item("1", "cup", "chicken liver, sliced", false),
+      item("1 1/4", "cups", "water and shrimp juice", false),
+      item("to taste", "", "salt and pepper", false)],
+     ["Saute garlic and onion. Add chicken and cook 2 minutes, then add chicken liver and cook 3 minutes.",
+      "Add shrimp juice and 1 cup water. Bring to a boil, cover, and simmer 5 minutes.",
+      "Add shrimp, salt, pepper, and oyster sauce; simmer 2 minutes.",
+      "Add cauliflower and cabbage, then carrots, snow peas, and bell peppers. Cover and cook about 5 minutes until vegetables are tender-crisp.",
+      "Mix cornstarch with remaining water, pour into the pan, and stir until sauce thickens. Serve hot."]).
+
+recipe_details(lumpiang_sariwa, 8,
+     [item("2", "cups", "sweet potato, cubed", false),
+      item("2", "tablespoons", "fish sauce", false),
+      item("1", "pound", "cabbage, shredded", false),
+      item("1 1/2", "cups", "carrots, julienned", false),
+      item("1/2", "cup", "water", false),
+      item("1/2", "cup", "peanuts, crushed", false),
+      item("6", "pieces", "lettuce leaves", false),
+      item("1/2", "pound", "pork, thinly sliced", false),
+      item("10", "ounces", "extra-firm tofu", false),
+      item("1", "cup", "shrimp, peeled", false),
+      item("15", "pieces", "long green beans, chopped", false),
+      item("1", "piece", "onion, chopped", false),
+      item("1/2", "cup", "cilantro, chopped", false),
+      item("3", "tablespoons", "garlic, minced", false),
+      item("1", "cup", "all-purpose flour", false),
+      item("2", "pieces", "eggs", false),
+      item("2", "tablespoons", "cooking oil", false),
+      item("1/2", "teaspoon", "salt", false),
+      item("1 1/2", "cups", "milk", false),
+      item("1", "tablespoon", "soy sauce", false),
+      item("6", "tablespoons", "brown sugar", false),
+      item("1 1/2", "cups", "water for sauce", false),
+      item("1/2", "teaspoon", "beef powder", false),
+      item("1", "tablespoon", "cornstarch", false)],
+     ["Saute garlic and onion in oil. Add pork and brown; add 1/2 cup water and simmer until tender.",
+      "Add shrimp and sweet potato; cook 5 minutes. Add tofu, cilantro, carrots, and beans. Mix in cabbage, cook 5 minutes, then season with fish sauce.",
+      "Whisk flour, eggs, milk, oil, and salt. Cook thin wrappers in a lightly greased nonstick pan until set.",
+      "For sauce, boil water with brown sugar, soy sauce, garlic, and beef powder. Stir in cornstarch dissolved in water and cook until thick.",
+      "Place lettuce and filling in each wrapper, fold, and top with sauce and crushed peanuts. Serve."]).
+
+recipe_details(lumpiang_togue, 6,
+     [item("1", "pound", "mung bean sprouts", false),
+      item("1", "piece", "carrot, julienned", false),
+      item("4", "cloves", "garlic, chopped", false),
+      item("1", "piece", "onion, sliced", false),
+      item("1/4", "cup", "dried shrimp", false),
+      item("8", "ounces", "fried tofu, diced", false),
+      item("1/8", "teaspoon", "ground black pepper", false),
+      item("2", "tablespoons", "fish sauce", false),
+      item("15", "pieces", "lumpia wrappers", false),
+      item("2", "cups", "cooking oil", false)],
+     ["Heat 2 tablespoons oil in a wok. Saute garlic and onion.",
+      "Add dried shrimp and cook 1 minute. Stir in tofu, fish sauce, and black pepper.",
+      "Add bean sprouts and cook 2 minutes; add carrot and cook 1 to 2 minutes. Remove filling and cool.",
+      "Wrap filling in lumpia wrappers. Deep-fry in remaining oil until golden; drain and serve with vinegar dip."]).

@@ -266,7 +266,13 @@ test(source_based_expanded_recipes_have_details) :-
                          champorado, tapsilog, tocilog, longsilog, hotsilog,
                          kare_kare, beef_caldereta, beef_mechado,
                          chicken_afritada, lumpiang_shanghai, kwek_kwek,
-                         turon]),
+                         turon, hotsilog_cheese, pork_menudo,
+                         chicken_menudo, pork_sisig, chicken_sisig,
+                         lechon_kawali, crispy_pata, bulalo, nilagang_baka,
+                         pochero, pork_pochero, pinakbet, pinakbet_tagalog,
+                         laing, ginataang_langka, ginataang_talong,
+                         adobong_kangkong, chopsuey, lumpiang_sariwa,
+                         lumpiang_togue]),
            (recipe_details(Dish, Servings, Ingredients, Steps),
             Servings > 0, Ingredients = [_|_], Steps = [_|_])).
 
