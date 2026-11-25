@@ -2,6 +2,8 @@
 % Food Recommendation Expert System
 % Knowledge Base: Facts and Rules
 
+:- consult('expanded_recipes.pl').
+
 % food(Dish, Category, RequiredIngredients).
 
 food(egg_fried_rice, rice, [rice, egg, oil]).
@@ -85,6 +87,10 @@ food(zucchini_stir_fry, dinner, [zucchini, garlic, soy_sauce, oil]).
 
 % Measured ingredients and concise cooking steps for the Bangus recipes.
 % item(Quantity, Unit, DisplayName, Optional).
+
+% Expanded recipes supply recommendation ingredients from a separate catalog.
+food(Dish, Category, Required) :-
+    expanded_recipe(Dish, Category, Required).
 
 recipe_details(fried_bangus, 2,
      [item("1 large boneless", "", "bangus (milkfish)", false),

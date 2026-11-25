@@ -21,3 +21,11 @@ The measured Bangus recipes below follow the cited recipe quantities. Measuremen
 - Panlasang Pinoy, [Bicol Express](https://panlasangpinoy.com/bicol-express/) — pork simmered with coconut milk, shrimp paste, and chilies.
 
 The five Filipino recipes added in this expansion use simplified required ingredients from these sources. The measured quantities and steps follow the cited recipe cards; optional ingredients are identified in the recipe details where applicable.
+
+The 100-recipe catalog expansion is a recommendation dataset: its simplified ingredient lists represent common recipe ingredients and are not full, measured recipe transcriptions. These indexes and archives were used to check dish names and recipe groupings; individual preparation methods and quantities should be consulted from a specific recipe before cooking.
+
+- Panlasang Pinoy, [Recipe sitemap](https://panlasangpinoy.com/html-sitemap/) — dish-name references across Filipino main dishes, noodles, soups, snacks, and desserts.
+- Panlasang Pinoy, [Rice cake recipes](https://panlasangpinoy.com/categories/recipes/rice-cake-recipes/) — kakanin and rice-based dessert references.
+- Panlasang Pinoy, [Dessert recipes](https://panlasangpinoy.com/categories/recipes/dessert-and-pastry-recipes/) — Filipino dessert references.
+- Kawaling Pinoy, [Recipe index](https://www.kawalingpinoy.com/category/recipe-index/) — Filipino recipe groupings by ingredient and dish type.
+- Kawaling Pinoy, [Main dishes](https://www.kawalingpinoy.com/category/main-dishes/) — Filipino entree and ulam references.
