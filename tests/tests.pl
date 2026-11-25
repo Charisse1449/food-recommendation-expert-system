@@ -272,7 +272,15 @@ test(source_based_expanded_recipes_have_details) :-
                          pochero, pork_pochero, pinakbet, pinakbet_tagalog,
                          laing, ginataang_langka, ginataang_talong,
                          adobong_kangkong, chopsuey, lumpiang_sariwa,
-                         lumpiang_togue]),
+                         lumpiang_togue, tokwa_baboy, okoy, banana_cue,
+                         camote_cue, ukoy, ensaladang_talong, ensaladang_pako,
+                         atchara, bistek_tagalog, beef_salpicao, beef_morcon,
+                         beef_pares, dinuguan, dinakdakan, bopis, embutido,
+                         humba, paksiw_na_lechon, pork_chicharon, chicken_inasal,
+                         chicken_galantina, chicken_binakol, chicken_pastel,
+                         chicken_curry_pinoy, chicken_pochero, chicken_hamonado,
+                         chicken_relleno, escabecheng_tilapia, tilapia_in_tomato,
+                         paksiw_na_isda]),
            (recipe_details(Dish, Servings, Ingredients, Steps),
             Servings > 0, Ingredients = [_|_], Steps = [_|_])).
 
