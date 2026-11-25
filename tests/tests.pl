@@ -252,11 +252,17 @@ test(expanded_catalog_has_exactly_100_unique_recipes) :-
 
 test(expanded_recommendations_use_their_ingredients) :-
     recommend(pancit_bihon, dinner,
-              [rice_noodles, chicken, cabbage, carrot, soy_sauce, onion,
-               garlic, oil]),
+              [rice_noodles, pork, chicken, snow_peas, carrot, cabbage,
+               celery, onion, garlic, chicken_powder, soy_sauce, water, oil]),
     recommend(maja_blanca, dessert,
               [cornstarch, coconut_milk, evaporated_milk, sweet_corn,
                sugar, cheese]).
+
+test(source_based_noodle_recipes_have_details) :-
+    forall(member(Dish, [pancit_bihon, pancit_canton, pancit_palabok,
+                         pancit_lomi]),
+           (recipe_details(Dish, Servings, Ingredients, Steps),
+            Servings > 0, Ingredients = [_|_], Steps = [_|_])).
 
 test(expanded_catalog_recipes_have_ingredients_and_details_or_fallback) :-
     forall(food(Dish, _, _),
