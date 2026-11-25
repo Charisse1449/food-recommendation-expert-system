@@ -260,7 +260,9 @@ test(expanded_recommendations_use_their_ingredients) :-
 
 test(source_based_noodle_recipes_have_details) :-
     forall(member(Dish, [pancit_bihon, pancit_canton, pancit_palabok,
-                         pancit_lomi]),
+                         pancit_lomi, pancit_malabon, pancit_sotanghon,
+                         pancit_miki, pancit_miswa, pancit_chami,
+                         pancit_batil_patong]),
            (recipe_details(Dish, Servings, Ingredients, Steps),
             Servings > 0, Ingredients = [_|_], Steps = [_|_])).
 
