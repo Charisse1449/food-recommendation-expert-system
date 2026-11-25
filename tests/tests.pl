@@ -280,7 +280,14 @@ test(source_based_expanded_recipes_have_details) :-
                          chicken_galantina, chicken_binakol, chicken_pastel,
                          chicken_curry_pinoy, chicken_pochero, chicken_hamonado,
                          chicken_relleno, escabecheng_tilapia, tilapia_in_tomato,
-                         paksiw_na_isda]),
+                         paksiw_na_isda, daing_na_bangus, paksiw_na_bangus,
+                         kinilaw_na_tuna, inihaw_na_tilapia, halabos_na_hipon,
+                         ginataang_tahong, sizzling_pusit, adobong_pusit,
+                         sinigang_na_hipon, sinigang_na_baboy_gabi,
+                         sinigang_na_baka, kansi, batchoy, mami, almondigas,
+                         sopas, macaroni_soup, mais_con_yelo, halo_halo,
+                         buko_pandan, mango_sago, leche_flan, ube_halaya,
+                         maja_blanca, bibingka]),
            (recipe_details(Dish, Servings, Ingredients, Steps),
             Servings > 0, Ingredients = [_|_], Steps = [_|_])).
 
