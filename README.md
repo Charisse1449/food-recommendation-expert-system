@@ -13,7 +13,7 @@ A food recommendation application in which SWI-Prolog checks recipes against the
 - Keep favorites and recommendation history in the browser.
 - Run the rules directly in SWI-Prolog or through the local HTTP/JSON interface.
 
-The knowledge base currently contains 37 recipes, 66 distinct ingredients, and seven categories, including three bangus dishes. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
+The knowledge base currently contains 42 recipes across seven categories, including three bangus dishes and five additional Filipino dishes: pork sinigang, tinolang manok, tortang talong, ginisang monggo, and Bicol Express. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
 
 ## Repository structure
 
