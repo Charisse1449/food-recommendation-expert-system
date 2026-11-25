@@ -1,35 +1,45 @@
 # Food Recommendation Expert System
 
-## 1. Project overview
+## 1. Project Overview
 
-The Food Recommendation Expert System helps users find recipes that fit the ingredients they have. It is intended for people choosing a meal from a known recipe collection. SWI-Prolog makes the recommendation decisions; a local browser interface makes the system easier to use.
+The Food Recommendation Expert System helps users find recipes that fit the ingredients they have. It is intended for people choosing a meal from a known recipe collection. SWI-Prolog makes the recommendation decisions, while a local browser interface makes the system easier to use.
 
-Objectives:
+### Objectives
 
 1. Represent recipes, categories, and required ingredients as Prolog knowledge.
 2. Recommend exact and partial recipe matches, explaining missing ingredients.
 3. Provide a usable web interface while keeping the reasoning available for direct Prolog queries.
 
-The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app. The knowledge base contains 142 recipes and 209 distinct ingredients across eight categories. The original 42 recipes and the first ten expanded noodle recipes have measured ingredient lists, servings, and cooking steps. The other 90 expanded recipes currently provide required ingredients for matching and ingredient display.
+The application includes searchable ingredient checkboxes in the recommendation form, category selection, ranked recommendations, in-app recipe details, favorites, and recommendation history. Clicking a recommended or saved recipe opens its details without leaving the app.
 
-## 2. Implementation & Prolog logic
+The knowledge base contains **142 recipes and 209 distinct ingredients across eight categories**. The original 42 recipes and the first ten expanded noodle recipes have measured ingredient lists, servings, and cooking steps. The other 90 expanded recipes currently provide required ingredients for matching and ingredient display.
 
-**Stack:** SWI-Prolog; SWI-Prolog HTTP/JSON libraries; HTML, CSS, and JavaScript.
+## 2. Implementation and Prolog Logic
 
-**Flow:** The browser requests recipe options from the local Prolog HTTP server, submits a category and ingredients, and displays the ranked results returned by Prolog. Recipe facts and all matching and ranking decisions are in `src/prolog/knowledge_base.pl`; `src/prolog/web_server.pl` exposes them to the browser. The console entry point remains in `src/prolog/main.pl`, and the UI is in `frontend/index.html`.
+### Technology Stack
 
-Important predicates:
+- **SWI-Prolog:** Handles recipe facts, ingredient matching, scoring, and recommendation ranking.
+- **SWI-Prolog HTTP/JSON libraries:** Provide communication between the Prolog backend and browser interface.
+- **HTML, CSS, and JavaScript:** Build the browser-based user interface.
+
+### System Flow
+
+The browser requests recipe options from the local Prolog HTTP server, submits a category and selected ingredients, and displays the ranked results returned by Prolog.
+
+Recipe facts and matching and ranking decisions are maintained in `src/prolog/knowledge_base.pl`. The file `src/prolog/web_server.pl` exposes the system functionality to the browser. The console entry point remains in `src/prolog/main.pl`, and the user interface is located in `frontend/index.html`.
+
+### Important Prolog Predicates
 
 - `food/3` represents each recipe as a dish, category, and required-ingredient list.
 - `has_all_ingredients/2` recursively checks a required-ingredient list.
 - `recommend/3` applies category matching and strict ingredient matching.
-- `recommendation_match/5` calculates a match percentage and the missing ingredients.
+- `recommendation_match/5` calculates a match percentage and identifies missing ingredients.
 - `ranked_recommendations/3` builds candidate results and sorts them by score, then dish name.
 - `recipe_details/4` stores measured ingredient lists, servings, and cooking steps for the original recipes and ten source-based expanded noodle dishes. Other expanded catalog entries supply ingredient requirements used for matching.
 
 These predicates demonstrate knowledge representation, unification, backtracking over recipe facts, recursion, list processing, and negation.
 
-Representative queries:
+### Representative Prolog Queries
 
 ```prolog
 ?- recommend(egg_fried_rice, rice, [rice, egg, oil]).
@@ -40,25 +50,53 @@ Score = 33,
 Missing = [egg, oil].
 ```
 
-## 3. How to run & test results
+The first query checks whether all required ingredients are available. The second query calculates a partial-match score and identifies the missing ingredients.
 
-Install SWI-Prolog, then run the web interface from the project directory:
+## 3. How to Run and Test Results
+
+### Requirements
+
+- SWI-Prolog installed on the computer.
+- The project repository downloaded or cloned.
+- A web browser for accessing the application.
+
+### Running the Web Application
+
+Open PowerShell in the project directory and execute:
 
 ```powershell
-swipl -q -s src/prolog/web_server.pl -g "start_server"
+& "C:\Program Files\swipl\bin\swipl.exe" -q -s src/prolog/web_server.pl -g "start_server"
 ```
 
-Open <http://127.0.0.1:8000>. Stop the server with `Ctrl+C`. The console interface can be run with `swipl -q -s src/prolog/main.pl -g main -t halt`.
+Open the following address in a browser:
 
-Run automated tests with:
+[http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+To stop the server, press `Ctrl+C` in PowerShell.
+
+The server listens only on `127.0.0.1`.
+
+### Running the Console Interface
+
+The original console interface can also be executed using:
 
 ```powershell
-swipl -q -s tests/tests.pl -g run_tests -t halt
+& "C:\Program Files\swipl\bin\swipl.exe" -q -s src/prolog/main.pl -g main -t halt
 ```
 
-The 69-test PlUnit suite passed. Representative test results:
+### Running Automated Tests
 
-| Test | Input | Actual result |
+Execute the following command in PowerShell:
+
+```powershell
+& "C:\Program Files\swipl\bin\swipl.exe" -q -s tests/tests.pl -g run_tests -t halt
+```
+
+The **69-test PlUnit suite passed**.
+
+### Representative Test Results
+
+| Test | Input | Actual Result |
 |---|---|---|
 | Complete match | `recommend(egg_fried_rice, rice, [rice, egg, oil])` | Succeeds. |
 | Missing ingredient | `recommend(egg_fried_rice, rice, [rice, egg])` | Fails as expected. |
@@ -69,12 +107,28 @@ The 69-test PlUnit suite passed. Representative test results:
 | Partial match | `recommendation_match(egg_fried_rice, rice, [rice], Score, Missing)` | Score is 33; missing list is `[egg, oil]`. |
 | Ranking | Rank rice recipes with `[rice, egg, oil, garlic]` | `egg_fried_rice` is first with score 100. |
 
-## 4. Team contributions & sources
+## 4. Team Contributions and Sources
 
-**Group members and responsibilities:** To be completed by the group.
+### Group Members and Responsibilities
 
-**GitHub repository:** <https://github.com/Charisse1449/food-recommendation-expert-system>
+To be completed by the group before final submission.
 
-**Recipe sources:** Simplified ingredient lists are referenced in [`sources.md`](sources.md), including BBC Good Food, Panlasang Pinoy (including the three bangus recipes), and Allrecipes.
+### GitHub Repository
 
-**Tools and assistance:** The application uses SWI-Prolog and standard browser technologies (HTML, CSS, and JavaScript). AI assistance was used during development; the group should review and be prepared to explain all submitted code.
+[https://github.com/Charisse1449/food-recommendation-expert-system](https://github.com/Charisse1449/food-recommendation-expert-system)
+
+### Recipe Sources
+
+Simplified ingredient lists are referenced in [`sources.md`](sources.md), including:
+
+- BBC Good Food
+- Panlasang Pinoy, including the three Bangus recipes
+- Allrecipes
+
+The recipe references provide the basis for the documented ingredient lists and recipe details.
+
+### Tools and Assistance
+
+The application uses SWI-Prolog and standard browser technologies, including HTML, CSS, and JavaScript.
+
+AI assistance was used during development. The group should review the implementation and be prepared to explain the submitted code and system functionality.

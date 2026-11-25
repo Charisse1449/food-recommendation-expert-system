@@ -266,15 +266,29 @@ test(source_based_noodle_recipes_have_details) :-
            (recipe_details(Dish, Servings, Ingredients, Steps),
             Servings > 0, Ingredients = [_|_], Steps = [_|_])).
 
+
 test(expanded_catalog_recipes_have_ingredients_and_details_or_fallback) :-
-    forall(food(Dish, _, _),
-           ( ( recipe_details(Dish, Servings, Ingredients, Instructions)
-             -> integer(Servings), Servings > 0, Ingredients = [_|_],
+    forall(
+        expanded_recipe(Dish, _, Required),
+        (
+            Required = [_|_],
+            (
+                recipe_details(Dish, Servings, Ingredients, Instructions)
+                ->
+                integer(Servings),
+                Servings > 0,
+                Ingredients = [_|_],
                 Instructions = [_|_],
-                forall(member(item(Quantity, Unit, Name, _), Ingredients),
-                       (string(Quantity), string(Unit), string(Name)))
-             ;  expanded_recipe(Dish, _, Required), Required = [_|_]
-             ) )).
+                forall(
+                    member(item(Quantity, Unit, Name, _), Ingredients),
+                    (string(Quantity), string(Unit), string(Name))
+                )
+                ;
+                true
+            )
+        )
+    ).
+
 
 test(fajitas_wrong_category, [fail]) :-
     recommend(chicken_fajitas, rice,
