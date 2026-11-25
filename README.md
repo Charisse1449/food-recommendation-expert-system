@@ -13,7 +13,7 @@ A food recommendation application in which SWI-Prolog checks recipes against the
 - Keep favorites and recommendation history in the browser.
 - Run the rules directly in SWI-Prolog or through the local HTTP/JSON interface.
 
-The knowledge base currently contains 142 Filipino recipes, 182 distinct ingredients, and eight categories. This includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The 100-recipe expansion models required ingredients for recommendation; measured quantities and cooking steps are not yet included for those additions. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
+The knowledge base currently contains 142 Filipino recipes, 197 distinct ingredients, and eight categories. This includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The expanded catalog provides ingredient matching for all 100 additions; four now include measured quantities and cooking steps, while those details remain to be added for 96. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
 
 ## Repository structure
 
@@ -110,7 +110,7 @@ Run the automated suite:
 swipl -q -s tests/tests.pl -g run_tests -t halt
 ```
 
-The suite contains 68 passing PlUnit tests. These representative cases were run against the Prolog knowledge base:
+The suite contains 69 passing PlUnit tests. These representative cases were run against the Prolog knowledge base:
 
 | Case | Query/input | Actual result |
 |---|---|---|

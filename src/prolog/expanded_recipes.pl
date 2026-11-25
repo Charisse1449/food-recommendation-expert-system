@@ -1,9 +1,118 @@
-% Additional Filipino dishes. Ingredient lists are simplified matching
-% requirements; details are shown in the UI as required ingredients.
-expanded_recipe(pancit_bihon, dinner, [rice_noodles, chicken, cabbage, carrot, soy_sauce, onion, garlic, oil]).
-expanded_recipe(pancit_canton, dinner, [egg_noodles, pork, shrimp, cabbage, carrot, soy_sauce, onion, garlic]).
-expanded_recipe(pancit_palabok, dinner, [rice_noodles, shrimp, pork, smoked_fish, egg, garlic, annatto, chicharon]).
-expanded_recipe(pancit_lomi, dinner, [thick_egg_noodles, chicken, pork, liver, cabbage, egg, cornstarch, garlic]).
+% Additional Filipino dishes. Ingredient lists supply matching requirements;
+% measured recipe details are supplied for selected dishes below.
+:- multifile recipe_details/4.
+:- discontiguous expanded_recipe/3.
+expanded_recipe(pancit_bihon, dinner,
+     [rice_noodles, pork, chicken, snow_peas, carrot, cabbage, celery,
+      onion, garlic, chicken_powder, soy_sauce, water, oil]).
+expanded_recipe(pancit_canton, dinner,
+     [egg_noodles, pork, chinese_sausage, shrimp, snap_peas, carrot, cabbage,
+      parsley, onion, garlic, soy_sauce, oyster_sauce, chicken_broth, water,
+      oil, salt, black_pepper]).
+expanded_recipe(pancit_palabok, dinner,
+     [palabok_noodles, pork_shoulder, shrimp_cube, tinapa_flakes, annatto_water,
+      flour, water, fish_sauce, black_pepper, oil, shrimp, napa_cabbage, egg,
+      chicharon, scallions]).
+expanded_recipe(pancit_lomi, soup,
+     [miki_noodles, pork, garlic, onion, kikiam, meatballs, cassava_flour,
+      ham, liver, fish_sauce, soy_sauce, black_pepper, broth, chicharon, egg,
+      oil]).
+
+recipe_details(pancit_bihon, 8,
+     [item("1", "pound", "rice noodles", false),
+      item("1/2", "pound", "pork, thinly sliced", false),
+      item("1/2", "pound", "cooked chicken, sliced", false),
+      item("1/8", "pound", "snow peas", false),
+      item("1", "cup", "carrot strips", false),
+      item("1/2", "small", "cabbage, chopped", false),
+      item("1", "cup", "celery leaves, chopped", false),
+      item("1", "piece", "onion, chopped", false),
+      item("1/2", "tablespoon", "garlic, minced", false),
+      item("2", "teaspoons", "chicken powder", false),
+      item("5", "tablespoons", "soy sauce", false),
+      item("3-4", "cups", "water", false),
+      item("3", "tablespoons", "cooking oil", false)],
+     ["Soak the rice noodles for 10 minutes, drain, and set aside.",
+      "Heat oil in a wok. Saute garlic and onion until softened, then brown the pork.",
+      "Add cooked chicken, chicken powder, and water. Simmer for 15 minutes.",
+      "Add carrots, snow peas, cabbage, and celery. Cook until tender-crisp, then lift out the meat and vegetables.",
+      "Stir soy sauce into the remaining broth. Add noodles and toss gently until tender and the liquid is absorbed.",
+      "Return the meat and vegetables, toss for 1 to 2 minutes, and serve hot."]).
+
+recipe_details(pancit_canton, 6,
+     [item("250", "grams", "flour stick noodles", false),
+      item("4", "ounces", "pork, thinly sliced", false),
+      item("1", "piece", "Chinese sausage, sliced", false),
+      item("8", "pieces", "shrimp, peeled", false),
+      item("10", "pieces", "snap peas", false),
+      item("3/4", "cup", "carrot, julienned", false),
+      item("1", "small", "cabbage, chopped", false),
+      item("1/2", "cup", "flat-leaf parsley, chopped", false),
+      item("1", "piece", "onion, sliced", false),
+      item("1", "teaspoon", "garlic, minced", false),
+      item("3", "tablespoons", "soy sauce", false),
+      item("1", "tablespoon", "oyster sauce", true),
+      item("1 1/2", "cups", "chicken broth", false),
+      item("3/4", "cup", "water", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("to taste", "", "salt", false),
+      item("to taste", "", "black pepper", false)],
+     ["Blanch snap peas, carrot, and cabbage briefly, then cool in ice water and drain.",
+      "Heat oil in a wok. Saute onion and garlic, then add pork and Chinese sausage.",
+      "Stir in soy sauce and optional oyster sauce. Add broth, water, salt, and pepper; bring to a boil.",
+      "Add shrimp and parsley and cook for 3 minutes. Toss in the noodles until they absorb the liquid.",
+      "Return the blanched vegetables, toss for 1 to 2 minutes, and serve."]).
+
+recipe_details(pancit_palabok, 6,
+     [item("12", "ounces", "palabok noodles", false),
+      item("2", "quarts", "water for soaking and cooking", false),
+      item("8", "ounces", "pork shoulder, sliced", false),
+      item("1", "piece", "shrimp bouillon cube", false),
+      item("1/2", "cup", "tinapa flakes", false),
+      item("6", "tablespoons", "all-purpose flour", false),
+      item("1/2", "cup", "water for flour slurry", false),
+      item("1/2", "cup", "annatto water", false),
+      item("3 1/2", "cups", "water", false),
+      item("3 1/2", "tablespoons", "fish sauce", false),
+      item("1/4", "teaspoon", "ground black pepper", false),
+      item("3", "tablespoons", "cooking oil", false),
+      item("12", "pieces", "shrimp, peeled and deveined", false),
+      item("1", "cup", "Napa cabbage", false),
+      item("3", "pieces", "hard-boiled eggs", false),
+      item("1/2", "cup", "crushed chicharon", false),
+      item("1/2", "cup", "chopped scallions", false),
+      item("to serve", "", "calamansi or lime", true)],
+     ["Soak the noodles for 30 minutes, drain, then cook in boiling water until tender. Set aside.",
+      "Heat oil in a pot and brown the pork. Stir in fish sauce and annatto water, add water, and simmer 15 to 18 minutes until tender.",
+      "Add the shrimp cube and tinapa flakes; cook for 5 minutes.",
+      "Mix flour with its measured water until smooth. Stir the slurry into the sauce gradually until thickened, then season with black pepper.",
+      "Boil shrimp until pink and blanch the cabbage for 1 minute.",
+      "Plate noodles with sauce, then top with shrimp, cabbage, eggs, chicharon, and scallions. Serve with calamansi or lime."]).
+
+recipe_details(pancit_lomi, 4,
+     [item("1", "pound", "miki noodles", false),
+      item("3", "cloves", "garlic, minced", false),
+      item("1", "medium", "onion, minced", false),
+      item("1/4", "pound", "cooked kikiam, sliced", false),
+      item("1/4", "pound", "pork, thinly sliced", false),
+      item("6-8", "pieces", "cooked meatballs", false),
+      item("3", "tablespoons", "cassava flour", false),
+      item("1/4", "pound", "ham, chopped", false),
+      item("1/4", "pound", "pork liver, sliced", false),
+      item("1 1/2", "tablespoons", "fish sauce", false),
+      item("1", "tablespoon", "soy sauce", false),
+      item("1", "teaspoon", "ground black pepper", false),
+      item("6", "cups", "pork or beef broth", false),
+      item("1", "cup", "chicharon, pounded", false),
+      item("1", "large", "egg, beaten", false),
+      item("2", "tablespoons", "scallions, chopped", true),
+      item("2", "tablespoons", "cooking oil", false)],
+     ["Heat oil. Saute garlic and onion, brown pork, and cook with ham for 2 minutes.",
+      "Stir in fish sauce and soy sauce. Add broth and simmer 20 to 30 minutes until pork is tender.",
+      "Add meatballs and kikiam; simmer 3 minutes. Add pepper and miki noodles; cook 5 to 6 minutes.",
+      "Mix cassava flour with an equal amount of water, then slowly stir the slurry into the soup until thickened.",
+      "Add liver and simmer 3 to 5 minutes until fully cooked. Lower heat and stir in beaten egg for 1 minute.",
+      "Serve hot topped with chicharon and optional scallions."]).
 expanded_recipe(pancit_malabon, dinner, [rice_noodles, shrimp, squid, smoked_fish, cabbage, egg, garlic, annatto]).
 expanded_recipe(pancit_sotanghon, dinner, [glass_noodles, chicken, carrot, celery, onion, garlic, chicken_broth, fish_sauce]).
 expanded_recipe(pancit_miki, dinner, [miki_noodles, pork, shrimp, cabbage, carrot, soy_sauce, garlic]).
