@@ -2,7 +2,7 @@
 
 The knowledge base uses a simplified set of required ingredients from the published recipes below. Optional toppings, serving suggestions, and minor seasoning items may be omitted where they are not modeled by the system.
 
-Measured recipe details follow the individual sources linked below. The 25 expanded dishes without individual recipe citations still provide required ingredients for recommendation matching only.
+Measured recipe details follow the individual sources linked below. All 100 expanded dishes now have measured recipe details, servings, instructions, and an individual recipe reference.
 
 - BBC Good Food, [Easy chicken fajitas](https://www.bbcgoodfood.com/recipes/easy-chicken-fajitas) — chicken fajitas.
 - BBC Good Food, [Easy classic lasagne](https://www.bbcgoodfood.com/recipes/classic-lasagne) — classic beef lasagne.
@@ -22,7 +22,7 @@ Measured recipe details follow the individual sources linked below. The 25 expan
 
 The original five Filipino recipes in the project use simplified required ingredients from their sources. Optional ingredients are identified in the recipe details where applicable.
 
-The 100-recipe catalog expansion is a recommendation dataset: its ingredient lists represent common recipe ingredients. For 25 dishes, measured quantities and cooking steps are still pending; those ingredient lists are not full recipe transcriptions. The indexes and archives below were used to check dish names and groupings.
+The 100-recipe catalog expansion is a recommendation dataset: its ingredient lists represent common recipe ingredients. The expanded catalog now includes source-based recipe cards for all 100 added dishes. The indexes and archives below were used to check dish names and groupings.
 
 The following expanded recipes now have measured ingredients and summarized steps transcribed from individual recipe pages:
 
@@ -110,3 +110,32 @@ The following expanded recipes now have measured ingredients and summarized step
 - Panlasang Pinoy, [Escabeche](https://panlasangpinoy.com/filipino-style-escabeche/).
 - Panlasang Pinoy, [Sarciadong Isda](https://panlasangpinoy.com/sarciadong-isda-easy-fish-recipe/) ? tomato-sauce fish method used for the tilapia variant.
 - Panlasang Pinoy, [Paksiw na Isda](https://panlasangpinoy.com/paksiw-na-isda-recipe/).
+
+
+## Final recipe details for the expanded catalog
+
+- Panlasang Pinoy, [Daing na Bangus](https://panlasangpinoy.com/daing-na-bangus-fried-milkfish-marinated-in-vinegar/).
+- Panlasang Pinoy, [Paksiw na Bangus](https://panlasangpinoy.com/paksiw-na-bangus-recipe/).
+- Panlasang Pinoy, [Kinilaw na Tuna](https://panlasangpinoy.com/kinilaw-kilawin-na-tuna/).
+- Panlasang Pinoy, [Inihaw na Tilapia](https://panlasangpinoy.com/top-10-favorite-tilapia-recipes/).
+- Panlasang Pinoy, [Halabos na Hipon](https://panlasangpinoy.com/halabos-na-hipon-recipe/).
+- Panlasang Pinoy, [Ginataang Tahong](https://panlasangpinoy.com/ginataang-tahong-recipe/).
+- Panlasang Pinoy, [Sizzling Pusit](https://panlasangpinoy.com/sizzling-pusit/).
+- Panlasang Pinoy, [Adobong Pusit](https://panlasangpinoy.com/adobong-pusit-recipe/).
+- Panlasang Pinoy, [Sinigang na Hipon](https://panlasangpinoy.com/filipino-food-sour-shrimp-soup-sinigang-na-hipon-recipe/).
+- Panlasang Pinoy, [Sinigang na Baboy with Gabi](https://panlasangpinoy.com/sinigang-na-baboy-with-gabi/).
+- Panlasang Pinoy, [Sinigang na Baka](https://panlasangpinoy.com/sinigang-na-baka-recipe/).
+- Panlasang Pinoy, [Cansi](https://panlasangpinoy.com/cansi-recipe-ilonggo-bulalo-and-sinigang-in-one-delicious-soup-dish/).
+- Panlasang Pinoy, [Batchoy](https://panlasangpinoy.com/batchoy/).
+- Panlasang Pinoy, [Chicken Mami](https://panlasangpinoy.com/chicken-mami/).
+- Panlasang Pinoy, [Almondigas](https://panlasangpinoy.com/almondigas-misua-patola-recipe/).
+- Panlasang Pinoy, [Chicken Sopas](https://panlasangpinoy.com/chicken-sopas-soup-recipe/).
+- Panlasang Pinoy, [Filipino Chicken Macaroni Sopas](https://panlasangpinoy.com/filipino-chicken-macaroni-sopas/).
+- Chef's Pencil, [Mais con Yelo](https://www.chefspencil.com/mais-con-yelo/).
+- Kawaling Pinoy, [Halo-halo](https://www.kawalingpinoy.com/halo-halo/).
+- Panlasang Pinoy, [Buko Pandan](https://panlasangpinoy.com/buko-pandan-dessert-recipe/).
+- Kawaling Pinoy, [Mango Sago](https://www.kawalingpinoy.com/mango-sago/).
+- Panlasang Pinoy, [Leche Flan](https://panlasangpinoy.com/leche-flan/).
+- Panlasang Pinoy, [Ube Halaya](https://panlasangpinoy.com/purple-yam-dessert-ube-halaya-recipe/).
+- Panlasang Pinoy, [Maja Blanca](https://panlasangpinoy.com/maja-blanca-recipe/).
+- Panlasang Pinoy, [Bibingka](https://panlasangpinoy.com/rice-cake-bibingka-recipe/).
