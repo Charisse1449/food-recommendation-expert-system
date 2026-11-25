@@ -13,7 +13,7 @@ A food recommendation application in which SWI-Prolog checks recipes against the
 - Keep favorites and recommendation history in the browser.
 - Run the rules directly in SWI-Prolog or through the local HTTP/JSON interface.
 
-The knowledge base currently contains 142 Filipino recipes, 197 distinct ingredients, and eight categories. This includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The expanded catalog provides ingredient matching for all 100 additions; four now include measured quantities and cooking steps, while those details remain to be added for 96. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
+The knowledge base currently contains 142 Filipino recipes, 209 distinct ingredients, and eight categories. This includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The expanded catalog provides ingredient matching for all 100 additions; ten now include measured quantities and cooking steps, while those details remain to be added for 90. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
 
 ## Repository structure
 
