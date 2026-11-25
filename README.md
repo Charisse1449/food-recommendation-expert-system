@@ -8,12 +8,12 @@ A food recommendation application in which SWI-Prolog checks recipes against the
 - Rank partial matches by the percentage of required ingredients available and show what is missing.
 - Search and select available ingredients with checkboxes on the Recommend Food page.
 - Open recipe details inside the app without leaving the page.
-- See measured ingredient quantities and cooking steps for all recipes inside the app, with no recipe-site links. Non-Bangus quantities are clearly marked as estimates.
+- Open recipe details inside the app. The original 42 recipes include measured ingredient quantities and cooking steps; the expanded catalog shows required ingredients for matching.
 - Open recipe details from recommendation results or saved favorites.
 - Keep favorites and recommendation history in the browser.
 - Run the rules directly in SWI-Prolog or through the local HTTP/JSON interface.
 
-The knowledge base currently contains 42 recipes across seven categories, including three bangus dishes and five additional Filipino dishes: pork sinigang, tinolang manok, tortang talong, ginisang monggo, and Bicol Express. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
+The knowledge base currently contains 142 Filipino recipes, 182 distinct ingredients, and eight categories. This includes 100 additional recipes across dinner, soup, fish, snack, breakfast, and dessert categories. The 100-recipe expansion models required ingredients for recommendation; measured quantities and cooking steps are not yet included for those additions. Time, budget, and dietary filters are not enabled because those attributes are not modeled in the knowledge base.
 
 ## Repository structure
 
@@ -23,6 +23,7 @@ food-recommendation-expert-system/
 ├── src/
 │   └── prolog/
 │       ├── knowledge_base.pl
+│       ├── expanded_recipes.pl
 │       ├── main.pl
 │       └── web_server.pl
 ├── frontend/
@@ -68,11 +69,12 @@ swipl -q -s src/prolog/main.pl -g main -t halt
 The project demonstrates several course concepts:
 
 - **Knowledge representation:** `food/3` facts store each dish, category, and required ingredient list.
+- **Expanded catalog:** `expanded_recipes.pl` adds 100 Filipino recipes; the options API derives categories and available ingredients from the complete catalog.
 - **Unification and backtracking:** `recommend/3` searches matching `food/3` facts and succeeds for each recipe whose category and ingredients fit.
 - **Recursion and list processing:** `has_all_ingredients/2` recursively checks the recipe's required-ingredient list.
 - **Negation:** `score_ingredients/6` uses negation to collect required ingredients the user does not have.
 - **Decision and ranking:** `ranked_recommendations/3` scores candidates and sorts them by score, then dish name.
-- **Recipe details:** `recipe_details/4` stores measured ingredient lists, serving counts, and cooking steps for every recipe; non-Bangus quantities are marked as estimates.
+- **Recipe details:** `recipe_details/4` stores measured ingredient lists, serving counts, and cooking steps for the original recipes. Expanded catalog entries expose their required ingredients and can be recommended, but do not yet include measured recipe instructions.
 
 Open the knowledge base directly with `swipl -q -s src/prolog/knowledge_base.pl` and try:
 
@@ -108,7 +110,7 @@ Run the automated suite:
 swipl -q -s tests/tests.pl -g run_tests -t halt
 ```
 
-The suite contains 60 passing PlUnit tests. These representative cases were run against the Prolog knowledge base:
+The suite contains 68 passing PlUnit tests. These representative cases were run against the Prolog knowledge base:
 
 | Case | Query/input | Actual result |
 |---|---|---|
