@@ -328,4 +328,38 @@ test(recommendations_rank_by_score) :-
     get_dict(name, Top, egg_fried_rice),
     get_dict(score, Top, 100).
 
+test(partial_match_reports_all_missing_ingredients) :-
+    recommendation_match(chicken_pasta, pasta, [pasta, chicken], Score, Missing),
+    assertion(Score =:= 50),
+    assertion(Missing == [tomato, oil]).
+
+test(ranked_recommendations_include_multiple_matches) :-
+    ranked_recommendations(rice, [rice, egg, oil, shrimp], Results),
+    findall(Dish,
+            (member(Result, Results), get_dict(name, Result, Dish)),
+            Dishes),
+    assertion(memberchk(egg_fried_rice, Dishes)),
+    assertion(memberchk(shrimp_fried_rice, Dishes)),
+    length(Dishes, Count),
+    assertion(Count > 1).
+
+test(ranked_recommendations_only_return_requested_category) :-
+    ranked_recommendations(dinner,
+                           [chicken, soy_sauce, vinegar, garlic, bay_leaf,
+                            black_peppercorns, sugar, water, oil], Results),
+    assertion(Results \= []),
+    forall(member(Result, Results), get_dict(category, Result, dinner)).
+
+test(new_dinakdakan_recipe_is_recommendable) :-
+    recommend(dinakdakan, dinner,
+              [pork, pork_liver, onion, ginger, chili, vinegar, mayonnaise]).
+
+test(new_dinakdakan_recipe_requires_vinegar, [fail]) :-
+    recommend(dinakdakan, dinner,
+              [pork, pork_liver, onion, ginger, chili, mayonnaise]).
+
+test(new_dessert_recipe_respects_category_filter, [fail]) :-
+    recommend(ube_halaya, dinner,
+              [ube, coconut_milk, condensed_milk, butter, sugar]).
+
 :- end_tests(food_recommendation).
