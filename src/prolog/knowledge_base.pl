@@ -56,6 +56,19 @@ food(sinigang_na_bangus, fish,
      [bangus, sinigang_mix, kangkong, sitaw, okra, long_green_pepper,
       tomato, onion, fish_sauce, black_pepper, water]).
 
+% Additional recipes using expanded ingredients.
+food(potato_omelet, breakfast, [potato, egg, onion, oil]).
+food(cabbage_stir_fry, dinner, [cabbage, garlic, soy_sauce, oil]).
+food(eggplant_omelet, breakfast, [eggplant, egg, onion, oil]).
+food(creamy_coconut_chicken, dinner, [chicken, coconut_milk, garlic, ginger]).
+food(mushroom_fried_rice, rice, [rice, mushroom, garlic, oil]).
+food(bell_pepper_chicken, dinner, [chicken, bell_pepper, onion, soy_sauce]).
+food(cucumber_salad, snack, [cucumber, vinegar, onion, salt]).
+food(chili_garlic_noodles, pasta, [pasta, chili, garlic, oil]).
+food(potato_carrot_soup, soup, [potato, carrot, onion, water]).
+food(fish_coconut_stew, fish, [fish, coconut_milk, ginger, onion]).
+food(zucchini_stir_fry, dinner, [zucchini, garlic, soy_sauce, oil]).
+
 % Measured ingredients and concise cooking steps for the Bangus recipes.
 % item(Quantity, Unit, DisplayName, Optional).
 
