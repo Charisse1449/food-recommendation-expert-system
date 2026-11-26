@@ -1085,6 +1085,43 @@
     .panel {
       min-width: 0;
     }
+    /* FIX: Independent scrolling for Dashboard, Favorites, and History */
+@media (min-width: 901px) {
+
+    body:has(#dashboard-view.active),
+    body:has(#favorites-view.active),
+    body:has(#history-view.active) {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    body:has(#dashboard-view.active) .app-shell,
+    body:has(#favorites-view.active) .app-shell,
+    body:has(#history-view.active) .app-shell {
+        height: 100vh;
+        min-height: 0;
+    }
+
+    body:has(#dashboard-view.active) .sidebar,
+    body:has(#favorites-view.active) .sidebar,
+    body:has(#history-view.active) .sidebar {
+        position: sticky;
+        top: 0;
+        align-self: start;
+        height: 100vh;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    body:has(#dashboard-view.active) main,
+    body:has(#favorites-view.active) main,
+    body:has(#history-view.active) main {
+        height: 100vh;
+        min-height: 0;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+    }
+}
 
   </style>
 </head>
