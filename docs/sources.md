@@ -4,6 +4,8 @@ The knowledge base uses a simplified set of required ingredients from the publis
 
 Measured recipe details follow the individual sources linked below. All 100 expanded dishes now have measured recipe details, servings, instructions, and an individual recipe reference.
 
+The expanded knowledge base also includes 11 additional recipes using 10 new ingredients. These additions extend the system's ingredient-matching coverage. Their required ingredient lists are currently modeled in the Prolog knowledge base and are not presented as independently verified published recipes.
+
 - BBC Good Food, [Easy chicken fajitas](https://www.bbcgoodfood.com/recipes/easy-chicken-fajitas) — chicken fajitas.
 - BBC Good Food, [Easy classic lasagne](https://www.bbcgoodfood.com/recipes/classic-lasagne) — classic beef lasagne.
 - BBC Good Food, [Easy pancakes](https://www.bbcgoodfood.com/recipes/easy-pancakes) — easy pancakes.
