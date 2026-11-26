@@ -8,7 +8,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <title>Food Recommendation Expert System</title>
-  <style>
+ 
+
+
+
+
+
+
+
+
+ <style>
     :root {
       color-scheme: light;
       --ink: #25352a;
@@ -383,6 +392,7 @@
     .recipe-grid {
         grid-template-columns: 1fr;
     }
+        }
     /* Professional culinary design system */
     :root {
       --ink: #202923;
@@ -920,6 +930,162 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
+
+    /* GLOBAL RESPONSIVE FIX */
+    @media (max-width: 900px) {
+      .app-shell {
+        display: block;
+        width: 100%;
+      }
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+      }
+
+      main {
+        width: 100%;
+        min-width: 0;
+        padding: 22px 20px 30px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .dashboard-grid,
+      .dashboard-feature-layout,
+      .recommend-layout,
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .dashboard-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .page-view#favorites-view .recipe-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 18px 14px 28px;
+      }
+
+      .page-header {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .page-heading {
+        min-width: 0;
+      }
+
+      .page-header h1 {
+        overflow-wrap: anywhere;
+      }
+
+      .stats-grid,
+      .dashboard-actions,
+      .dashboard-grid,
+      .dashboard-feature-layout,
+      .recommend-layout,
+      .about-grid,
+      .recipe-grid,
+      .page-view#favorites-view .recipe-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ingredient-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ingredient-option {
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .favorites-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .favorites-toolbar .favorites-search-field {
+        width: 100%;
+        flex-basis: auto;
+      }
+
+      .favorites-toolbar .favorites-count {
+        align-self: flex-end;
+      }
+
+      .page-view#history-view .history-row {
+        grid-template-columns: 48px minmax(0, 1fr) auto;
+        gap: 8px;
+      }
+
+      .page-view#history-view .history-row .food-thumb {
+        width: 48px;
+        height: 48px;
+      }
+
+      .page-view#history-view .history-row .history-date {
+        display: none;
+      }
+
+      .result-card {
+        min-width: 0;
+      }
+
+      .recipe-dialog {
+        width: calc(100vw - 20px);
+      }
+    }
+
+    @media (max-width: 380px) {
+      .nav-link {
+        padding: 8px;
+        font-size: 10px;
+      }
+
+      .page-header h1 {
+        font-size: 22px;
+      }
+
+      .ingredient-search-row {
+        flex-wrap: wrap;
+      }
+
+      .selection-count {
+        white-space: normal;
+      }
+
+      .result-card {
+        overflow-wrap: anywhere;
+      }
+
+      .dashboard-hero-copy {
+        padding: 18px;
+      }
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .app-shell,
+    main,
+    .page-view,
+    .panel {
+      min-width: 0;
+    }
+
   </style>
 </head>
 <body>
